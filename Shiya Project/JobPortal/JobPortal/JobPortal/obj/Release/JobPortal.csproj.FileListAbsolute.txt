@@ -1,0 +1,13 @@
+D:\ShiyaProjects\JobPortal\JobPortal\bin\JobPortal.dll
+D:\ShiyaProjects\JobPortal\JobPortal\bin\JobPortal.pdb
+D:\ShiyaProjects\JobPortal\JobPortal\bin\EntityFramework.xml
+D:\ShiyaProjects\JobPortal\JobPortal\bin\EntityFramework.SqlServer.xml
+D:\ShiyaProjects\JobPortal\JobPortal\bin\System.Web.Helpers.xml
+D:\ShiyaProjects\JobPortal\JobPortal\bin\System.Web.Mvc.xml
+D:\ShiyaProjects\JobPortal\JobPortal\bin\System.Web.Razor.xml
+D:\ShiyaProjects\JobPortal\JobPortal\bin\System.Web.WebPages.xml
+D:\ShiyaProjects\JobPortal\JobPortal\bin\System.Web.WebPages.Deployment.xml
+D:\ShiyaProjects\JobPortal\JobPortal\bin\System.Web.WebPages.Razor.xml
+D:\ShiyaProjects\JobPortal\JobPortal\obj\Release\JobPortal.dll
+D:\ShiyaProjects\JobPortal\JobPortal\obj\Release\JobPortal.pdb
+D:\ShiyaProjects\JobPortal\JobPortal\obj\Release\JobPortal.csprojResolveAssemblyReference.cache

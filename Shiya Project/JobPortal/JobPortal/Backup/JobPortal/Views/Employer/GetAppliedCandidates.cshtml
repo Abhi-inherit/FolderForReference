@@ -1,0 +1,61 @@
+﻿@model IEnumerable<JobPortal.Models.CandidateAppliedjobs>
+
+<div class="banner">
+		    	<h2>
+				<span>Applied Candidates</span>
+				</h2>
+</div>
+<div class="mailbox-content">
+     <table class="table">
+                    <tbody>
+                        @foreach (var item in Model) {
+                        <tr class="table-row">
+                            <td class="table-img">
+                               <img src="images/in.jpg" alt="" />
+                            </td>
+                            <td class="table-text">
+                            	<h6>  @Html.DisplayFor(modelItem => item.Cand_Name) -  @Html.DisplayFor(modelItem => item.Cand_HighestQualification)- Applied For</h6>
+                                <p> @Html.DisplayFor(modelItem => item.Job_Title)</p>
+                            </td>
+                            <td>
+                            	<input type="button" class="fam" value="View Profile" data-toggle="modal" data-target="#myModal" onclick ="ViewCandidateProfile(@item.Cand_id)" />
+                            </td>
+                             <td>
+                            	<input type="button" class="fam"  value="Change Status" data-toggle="modal" data-target="#myModal" onclick ="ChangeCandProfileStatus(@item.Cand_id,@item.Job_Id)" />
+                            </td>
+                            <td class="march">
+                               @Html.DisplayFor(modelItem => item.Cand_JobAppliedDateTime)
+                            </td>
+                          
+                             <td >
+							 <i class="fa fa-star-half-o icon-state-warning"></i>
+                                
+                            </td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+</div> 
+
+<input type="hidden" id="hd_CandId" value="" />
+<input type="hidden" id="hd_JobId" value="" />
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body" id="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>

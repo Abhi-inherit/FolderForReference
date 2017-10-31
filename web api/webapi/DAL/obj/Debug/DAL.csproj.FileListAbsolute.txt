@@ -1,0 +1,30 @@
+\\AITRICH-WIN8\Students\jithu\web api\webapi\DAL\bin\Debug\DAL.dll
+\\AITRICH-WIN8\Students\jithu\web api\webapi\DAL\bin\Debug\DAL.pdb
+\\AITRICH-WIN8\Students\jithu\web api\webapi\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+\\AITRICH-WIN8\Students\jithu\web api\webapi\DAL\obj\Debug\DAL.dll
+\\AITRICH-WIN8\Students\jithu\web api\webapi\DAL\obj\Debug\DAL.pdb
+\\AITRICH-WIN8\Students\jithu\web api\webapi\DAL\bin\Debug\DAL.dll.config
+\\AITRICH-WIN8\Students\jithu\web api\webapi\DAL\bin\Debug\EntityFramework.dll
+\\AITRICH-WIN8\Students\jithu\web api\webapi\DAL\bin\Debug\EntityFramework.SqlServer.dll
+\\AITRICH-WIN8\Students\jithu\web api\webapi\DAL\bin\Debug\EntityFramework.xml
+\\AITRICH-WIN8\Students\jithu\web api\webapi\DAL\bin\Debug\EntityFramework.SqlServer.xml
+F:\JITHU\jithu\web api\webapi\DAL\bin\Debug\DAL.dll.config
+F:\JITHU\jithu\web api\webapi\DAL\bin\Debug\DAL.dll
+F:\JITHU\jithu\web api\webapi\DAL\bin\Debug\DAL.pdb
+F:\JITHU\jithu\web api\webapi\DAL\bin\Debug\EntityFramework.dll
+F:\JITHU\jithu\web api\webapi\DAL\bin\Debug\EntityFramework.SqlServer.dll
+F:\JITHU\jithu\web api\webapi\DAL\bin\Debug\EntityFramework.xml
+F:\JITHU\jithu\web api\webapi\DAL\bin\Debug\EntityFramework.SqlServer.xml
+F:\JITHU\jithu\web api\webapi\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+F:\JITHU\jithu\web api\webapi\DAL\obj\Debug\DAL.dll
+F:\JITHU\jithu\web api\webapi\DAL\obj\Debug\DAL.pdb
+\\AITRICH-WIN8\teaching files\web api\webapi\DAL\bin\Debug\DAL.dll.config
+\\AITRICH-WIN8\teaching files\web api\webapi\DAL\bin\Debug\DAL.dll
+\\AITRICH-WIN8\teaching files\web api\webapi\DAL\bin\Debug\DAL.pdb
+\\AITRICH-WIN8\teaching files\web api\webapi\DAL\bin\Debug\EntityFramework.dll
+\\AITRICH-WIN8\teaching files\web api\webapi\DAL\bin\Debug\EntityFramework.SqlServer.dll
+\\AITRICH-WIN8\teaching files\web api\webapi\DAL\bin\Debug\EntityFramework.xml
+\\AITRICH-WIN8\teaching files\web api\webapi\DAL\bin\Debug\EntityFramework.SqlServer.xml
+\\AITRICH-WIN8\teaching files\web api\webapi\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+\\AITRICH-WIN8\teaching files\web api\webapi\DAL\obj\Debug\DAL.dll
+\\AITRICH-WIN8\teaching files\web api\webapi\DAL\obj\Debug\DAL.pdb

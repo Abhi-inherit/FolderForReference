@@ -1,0 +1,57 @@
+\\AITRICH-WIN8\Students\jithu\web api\webapi\webapi\bin\webapi.dll
+\\AITRICH-WIN8\Students\jithu\web api\webapi\webapi\bin\webapi.pdb
+\\AITRICH-WIN8\Students\jithu\web api\webapi\webapi\bin\Newtonsoft.Json.dll
+\\AITRICH-WIN8\Students\jithu\web api\webapi\webapi\bin\System.Net.Http.Formatting.dll
+\\AITRICH-WIN8\Students\jithu\web api\webapi\webapi\bin\System.Web.Http.dll
+\\AITRICH-WIN8\Students\jithu\web api\webapi\webapi\bin\System.Web.Http.WebHost.dll
+\\AITRICH-WIN8\Students\jithu\web api\webapi\webapi\bin\Newtonsoft.Json.xml
+\\AITRICH-WIN8\Students\jithu\web api\webapi\webapi\bin\System.Net.Http.Formatting.xml
+\\AITRICH-WIN8\Students\jithu\web api\webapi\webapi\bin\System.Web.Http.xml
+\\AITRICH-WIN8\Students\jithu\web api\webapi\webapi\bin\System.Web.Http.WebHost.xml
+\\AITRICH-WIN8\Students\jithu\web api\webapi\webapi\obj\Debug\webapi.csprojResolveAssemblyReference.cache
+\\AITRICH-WIN8\Students\jithu\web api\webapi\webapi\obj\Debug\webapi.dll
+\\AITRICH-WIN8\Students\jithu\web api\webapi\webapi\obj\Debug\webapi.pdb
+\\AITRICH-WIN8\Students\jithu\web api\webapi\webapi\bin\DAL.dll
+\\AITRICH-WIN8\Students\jithu\web api\webapi\webapi\bin\EntityFramework.dll
+\\AITRICH-WIN8\Students\jithu\web api\webapi\webapi\bin\EntityFramework.SqlServer.dll
+\\AITRICH-WIN8\Students\jithu\web api\webapi\webapi\bin\DAL.pdb
+\\AITRICH-WIN8\Students\jithu\web api\webapi\webapi\bin\EntityFramework.xml
+\\AITRICH-WIN8\Students\jithu\web api\webapi\webapi\bin\EntityFramework.SqlServer.xml
+F:\JITHU\jithu\web api\webapi\webapi\obj\Debug\webapi.csprojResolveAssemblyReference.cache
+F:\JITHU\jithu\web api\webapi\webapi\obj\Debug\webapi.dll
+F:\JITHU\jithu\web api\webapi\webapi\obj\Debug\webapi.pdb
+F:\JITHU\jithu\web api\webapi\webapi\bin\webapi.dll
+F:\JITHU\jithu\web api\webapi\webapi\bin\webapi.pdb
+F:\JITHU\jithu\web api\webapi\webapi\bin\DAL.dll
+F:\JITHU\jithu\web api\webapi\webapi\bin\EntityFramework.dll
+F:\JITHU\jithu\web api\webapi\webapi\bin\EntityFramework.SqlServer.dll
+F:\JITHU\jithu\web api\webapi\webapi\bin\Newtonsoft.Json.dll
+F:\JITHU\jithu\web api\webapi\webapi\bin\System.Net.Http.Formatting.dll
+F:\JITHU\jithu\web api\webapi\webapi\bin\System.Web.Http.dll
+F:\JITHU\jithu\web api\webapi\webapi\bin\System.Web.Http.WebHost.dll
+F:\JITHU\jithu\web api\webapi\webapi\bin\DAL.pdb
+F:\JITHU\jithu\web api\webapi\webapi\bin\EntityFramework.xml
+F:\JITHU\jithu\web api\webapi\webapi\bin\EntityFramework.SqlServer.xml
+F:\JITHU\jithu\web api\webapi\webapi\bin\Newtonsoft.Json.xml
+F:\JITHU\jithu\web api\webapi\webapi\bin\System.Net.Http.Formatting.xml
+F:\JITHU\jithu\web api\webapi\webapi\bin\System.Web.Http.xml
+F:\JITHU\jithu\web api\webapi\webapi\bin\System.Web.Http.WebHost.xml
+\\AITRICH-WIN8\teaching files\web api\webapi\webapi\bin\webapi.dll
+\\AITRICH-WIN8\teaching files\web api\webapi\webapi\bin\webapi.pdb
+\\AITRICH-WIN8\teaching files\web api\webapi\webapi\bin\DAL.dll
+\\AITRICH-WIN8\teaching files\web api\webapi\webapi\bin\EntityFramework.dll
+\\AITRICH-WIN8\teaching files\web api\webapi\webapi\bin\EntityFramework.SqlServer.dll
+\\AITRICH-WIN8\teaching files\web api\webapi\webapi\bin\Newtonsoft.Json.dll
+\\AITRICH-WIN8\teaching files\web api\webapi\webapi\bin\System.Net.Http.Formatting.dll
+\\AITRICH-WIN8\teaching files\web api\webapi\webapi\bin\System.Web.Http.dll
+\\AITRICH-WIN8\teaching files\web api\webapi\webapi\bin\System.Web.Http.WebHost.dll
+\\AITRICH-WIN8\teaching files\web api\webapi\webapi\bin\DAL.pdb
+\\AITRICH-WIN8\teaching files\web api\webapi\webapi\bin\EntityFramework.xml
+\\AITRICH-WIN8\teaching files\web api\webapi\webapi\bin\EntityFramework.SqlServer.xml
+\\AITRICH-WIN8\teaching files\web api\webapi\webapi\bin\Newtonsoft.Json.xml
+\\AITRICH-WIN8\teaching files\web api\webapi\webapi\bin\System.Net.Http.Formatting.xml
+\\AITRICH-WIN8\teaching files\web api\webapi\webapi\bin\System.Web.Http.xml
+\\AITRICH-WIN8\teaching files\web api\webapi\webapi\bin\System.Web.Http.WebHost.xml
+\\AITRICH-WIN8\teaching files\web api\webapi\webapi\obj\Debug\webapi.csprojResolveAssemblyReference.cache
+\\AITRICH-WIN8\teaching files\web api\webapi\webapi\obj\Debug\webapi.dll
+\\AITRICH-WIN8\teaching files\web api\webapi\webapi\obj\Debug\webapi.pdb

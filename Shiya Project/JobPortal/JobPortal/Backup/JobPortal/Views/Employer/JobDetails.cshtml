@@ -1,0 +1,45 @@
+﻿@model JobPortal.Models.Jobs
+
+<table>
+
+    <tr><td>JTitle</td>
+    <td>
+        @Html.DisplayFor(model => model.Job_Title)
+    </td></tr> 
+
+    <tr><td>Designation</td>
+    <td>
+        @Html.DisplayFor(model => model.Job_Designation)
+    </td></tr> 
+
+    <tr><td>Description</td>
+    <td>
+        @Html.DisplayFor(model => model.Job_Description)
+    </td></tr>
+
+    <tr><td>CategoryName</td>
+    <td>
+        @Html.DisplayFor(model => model.CategoryName)
+    </td></tr>
+
+    <tr><td>LocationName</td>
+    <td>
+        @Html.DisplayFor(model => model.LocationName)
+    </td></tr>
+
+    <tr><td>Experience</td>
+    <td>
+        @Html.DisplayFor(model => model.Experience)
+    </td></tr>
+
+     <tr><td>Date</td>
+    <td>
+        @Html.DisplayFor(model => model.Job_DateTime)
+    </td></tr>
+
+    <tr><td>Status</td>
+    <td>
+        @Html.DisplayFor(model => model.Job_Status)
+    </td></tr>
+</table>
+

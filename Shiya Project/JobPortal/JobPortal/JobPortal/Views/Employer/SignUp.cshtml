@@ -1,0 +1,80 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Sign Up</title>
+    <link href="@Url.Content("~/Content/Admin/css/bootstrap.min.css")" rel='stylesheet' type='text/css' />
+    <link href="@Url.Content("~/Content/Admin/css/style.css")" rel='stylesheet' type='text/css' />
+    <link href="@Url.Content("~/Content/Admin/css/font-awesome.css")" rel="stylesheet">       
+        
+</head>
+<body>
+  <div class="login">
+		<h1><a>Employer Registration</a></h1>
+		<div class="login-bottom">
+			<h2>Sign Up</h2>
+            @using (@Html.BeginForm("RegisterNewEmployer", "Employer", FormMethod.Post,new { enctype = "multipart/form-data" }))
+            {
+			<div class="col-md-6">
+				<div class="login-mail">
+					<input type="text" placeholder="User Name" required="" id="txt_empUserName" name="txt_empUserName">
+					
+				</div>
+				<div class="login-mail">
+					<input type="password" placeholder="Password" required="" id="txt_empPassword" name="txt_empPassword">
+					<i class="fa fa-lock"></i>
+				</div>
+				<div class="login-mail">
+					<input type="password" placeholder="Confirm password" required="" id="txt_empConfirmPassword" name="txt_empConfirmPassword">
+					<i class="fa fa-lock"></i>
+				</div>
+                <div class="login-mail">
+					<input type="text" placeholder="Name" required="" id="txt_empName" name="txt_empName">
+					
+				</div>
+                <div class="login-mail">
+					<input type="text" placeholder="Email Id" required="" id="txt_empEmail" name="txt_empEmail">
+					
+				</div>
+                <div class="login-mail">
+					<input type="text" placeholder="Mobile Number" required="" id="txt_empMobile" name="txt_empMobile">
+					
+				</div>
+                <div class="login-mail">
+					<input type="text" placeholder="Address" required="" id="txt_empAddress" name="txt_empAddress">
+					
+				</div>
+                <div class="login-mail">
+					<input type="text" placeholder="Contact Person Name" required="" id="txt_empContactPerson" name="txt_empContactPerson">
+					
+				</div>
+               
+                <div class="login-mail">
+					<input type="text" placeholder="Place" required="" id="txt_empPlace" name="txt_empPlace">
+					
+				</div>
+                <div class="login-mail">
+					<input type="file" id="file1" name="file1" />
+					
+				</div>
+                
+				  <a class="news-letter" href="#">
+						 <label class="checkbox1"><input type="checkbox" name="checkbox" ><i> </i>I agree with the terms</label>
+					   </a>
+	
+			</div>
+			<div class="col-md-6 login-do">
+				<label class="hvr-shutter-in-horizontal login-sub">
+					<input type="submit" value="Submit">
+					</label>
+           
+					<p>Already register</p>
+                @Html.ActionLink("Login", "EmployerLogin", "Employer", new { @class = "hvr-shutter-in-horizontal" })
+			</div>
+            }
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</body>
+</html>

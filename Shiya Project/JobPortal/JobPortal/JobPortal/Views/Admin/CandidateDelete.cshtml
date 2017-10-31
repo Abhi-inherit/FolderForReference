@@ -1,0 +1,22 @@
+﻿@model JobPortal.Models.Candidate
+
+<h3>Are you sure you want to delete this?</h3><br />
+<table>
+<tr class="row">    <td class="col-md-3 .col-md-pull-9"> Cand_Name</td><td class="col-md-9 .col-md-push-3"> @Html.DisplayFor(model => model.Cand_Name)</td></tr>
+<tr class="row">    <td class="col-md-3 .col-md-pull-9"> Category</td><td class="col-md-9 .col-md-push-3"> @Html.DisplayFor(model => model.CategoryName)</td></tr>
+<tr class="row">    <td class="col-md-3 .col-md-pull-9"> Location</td><td class="col-md-9 .col-md-push-3"> @Html.DisplayFor(model => model.LocationName)</td></tr>
+<tr class="row">    <td class="col-md-3 .col-md-pull-9"> Experience</td><td class="col-md-9 .col-md-push-3"> @Html.DisplayFor(model => model.ExperienceLevel)</td></tr>
+<tr class="row">    <td class="col-md-3 .col-md-pull-9"> User Name</td><td class="col-md-9 .col-md-push-3"> @Html.DisplayFor(model => model.Cand_UserName)</td></tr>
+<tr class="row">    <td class="col-md-3 .col-md-pull-9"> Password</td><td class="col-md-9 .col-md-push-3"> @Html.DisplayFor(model => model.Cand_Password)</td></tr>
+<tr class="row">    <td class="col-md-3 .col-md-pull-9"> Email Id</td><td class="col-md-9 .col-md-push-3"> @Html.DisplayFor(model => model.Cand_EmailId)</td></tr>
+<tr class="row">    <td class="col-md-3 .col-md-pull-9"> Mobile Number</td><td class="col-md-9 .col-md-push-3"> @Html.DisplayFor(model => model.Cand_MobileNumber)</td></tr>
+<tr class="row">    <td class="col-md-3 .col-md-pull-9"> Address</td><td class="col-md-9 .col-md-push-3"> @Html.DisplayFor(model => model.Cand_Address)</td></tr>
+<tr class="row">    <td class="col-md-3 .col-md-pull-9"> Qualification</td><td class="col-md-9 .col-md-push-3"> @Html.DisplayFor(model => model.Cand_HighestQualification)</td></tr>
+<tr class="row">    <td class="col-md-3 .col-md-pull-9"> Skills</td><td class="col-md-9 .col-md-push-3"> @Html.DisplayFor(model => model.Cand_SkillDescription)</td></tr>
+<tr class="row">    <td class="col-md-3 .col-md-pull-9"> Resume</td><td class="col-md-9 .col-md-push-3"> @Html.DisplayFor(model => model.Cand_Resume)</td></tr>
+<tr class="row">    <td class="col-md-3 .col-md-pull-9"> Date</td><td class="col-md-9 .col-md-push-3"> @Html.DisplayFor(model => model.Cand_DateTime)</td></tr>
+</table><br />
+<p>
+        <input type="submit" value="Delete" class="btn btn-xs btn-info" onclick="DeleteCandidate(@Model.Cand_Id)"/> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>

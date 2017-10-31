@@ -1,0 +1,16 @@
+﻿<table>
+    <tr>
+        <td>Status</td>
+        <td>@Html.DropDownList("Emp_StatusId",ViewBag.EmpStatus as List<SelectListItem>,new{@class="form-control1"})</td>
+    </tr>
+    <tr>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <input type="hidden" value="0" id="hid_Empid" />
+            <input type="submit" value="Save" class="btn btn-default" onclick="UpdateEmployerStatus()"/>
+        </td>
+    </tr>
+</table>

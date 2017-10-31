@@ -1,0 +1,58 @@
+﻿@model JobPortal.Models.Employer
+
+<h3>Are you sure you want to delete this?</h3>
+
+<table>
+    <tr class="row">
+    <td class="col-md-3 .col-md-pull-9">CompanyName</td>
+    <td class="col-md-9 .col-md-push-3">
+        @Html.DisplayFor(model => model.Emp_Name)
+    </td>
+    </tr><tr class="row">
+    <td class="col-md-3 .col-md-pull-9">Address</td>
+    <td class="col-md-9 .col-md-push-3">
+        @Html.DisplayFor(model => model.Emp_Address)
+    </td>
+    </tr><tr class="row">
+    <td class="col-md-3 .col-md-pull-9">Contact Person Name</td>
+    <td class="col-md-9 .col-md-push-3">
+        @Html.DisplayFor(model => model.Emp_ContactPersonName)
+    </td>
+    </tr><tr class="row">
+    <td class="col-md-3 .col-md-pull-9">Email Id</td>
+    <td class="col-md-9 .col-md-push-3">
+        @Html.DisplayFor(model => model.Emp_EmailId)
+    </td>
+    </tr><tr class="row">
+    <td class="col-md-3 .col-md-pull-9">Mobile Number</td>
+    <td class="col-md-9 .col-md-push-3">
+        @Html.DisplayFor(model => model.Emp_MobileNumber)
+    </td>
+    </tr><tr class="row">
+    <td class="col-md-3 .col-md-pull-9">Place</td>
+    <td class="col-md-9 .col-md-push-3">
+        @Html.DisplayFor(model => model.Emp_Place)
+    </td>
+    </tr><tr class="row">
+    <td class="col-md-3 .col-md-pull-9">Logo Image</td>
+    <td class="col-md-9 .col-md-push-3">
+        @Html.DisplayFor(model => model.Emp_LogoImage)
+    </td>
+    </tr><tr class="row">
+    <td class="col-md-3 .col-md-pull-9">Date</td>
+    <td class="col-md-9 .col-md-push-3">
+        @Html.DisplayFor(model => model.Emp_DateTime)
+    </td>
+    </tr><tr class="row">
+    <td class="col-md-3 .col-md-pull-9">Status</td>
+    <td class="col-md-9 .col-md-push-3">
+        @Html.DisplayFor(model => model.Emp_Status)
+    </td>
+    </tr> 
+<//table>
+
+    <p>
+        <input type="submit" value="Delete" class="btn btn-xs btn-info" onclick="DeleteEmployer(@Model.Emp_Id)" /> |
+        <input type="submit" value="Back To List" class="btn btn-xs btn-info" onclick="ListEmployer(0,'','','')" />
+    </p>
+

@@ -1,0 +1,30 @@
+.cs-dv-box{border:solid 5px #53A8CE;border-top:0;border-bottom:0}
+.cs-dv-hed{background-color:#53A8CE}
+.cs-dv-cnt{background-color:#FFF;min-height:250px;text-align:center;position:relative}
+.cs-dv-ftr{background-color:#53A8CE}
+div#s-cntrl{margin-bottom:50px;margin-top:5px;background-color:#FFF}
+.slider_div{background-color:#CE7F53;padding:5px 0;text-align:center;height:20px;margin-bottom:5px;margin-top:2px}
+.slider_div_right,.slider_div_left{margin:-5px 0;cursor:s-resize;visibility:hidden}
+.slider_div_left{background-color:#CE7F53;width:25px;height:30px;float:left;border-right:solid 1px #B36A42;box-shadow:1px 0 0 0 #DC9771;background-position:-106px -4px}
+.slider_div_right,.slider_div_left{margin:-5px 0;cursor:s-resize;visibility:hidden}
+.slider_div_right{background-color:#CE7F53;width:25px;height:30px;float:right;border-left:solid 1px #B36A42;box-shadow:-1px 0 0 0 #DC9771;background-position:-106px -4px}
+.slider_div_drag{width:25px;height:14px;padding:8px 0;float:right;background-color:#BB724A;margin:-5px 30px}
+a.tab-menu{padding:5px 10px;display:inline-block;vertical-align:middle;color:#1D1D1D;border:solid 1px #8C5436;border-radius:2px}
+.slider_div_menu{margin:-3px 0;display:inline-block}
+div#preview_bg{display:inline-block}
+.td-chr{width:1px;height:35px;background-color:#41829E;display:inline-block;vertical-align:middle;box-shadow:1px 0 0 0 #63CFFF;margin:0 5px}
+.edit_div{background-color:#DCDCDC;padding:10px 10px}
+.edt_div_txt{display:inline-block;vertical-align:middle}
+span.edit_icn{background-position:-10px -28px}
+span.dwn_icn{background-position:-321px -55px}
+.animated{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both}
+@-webkit-keyframes bounceIn{0%{opacity:0;-webkit-transform:scale(.3)}50%{opacity:1;-webkit-transform:scale(1)}70%{-webkit-transform:scale(.9)}100%{-webkit-transform:scale(1)}}
+@keyframes bounceIn{0%{opacity:0;transform:scale(.3)}50%{opacity:1;transform:scale(1)}70%{transform:scale(.9)}100%{transform:scale(1)}}
+.bounceIn{-webkit-animation-name:bounceIn;animation-name:bounceIn}
+.hlt_icon{background-position:-268px -9px}
+.onoffswitch{display:inline-block;width:100px;vertical-align:middle}
+.posdiv{display:inline-block;vertical-align:middle;padding:5px 0}
+.c-w8-hd-font{font-size:13px;color:#FFF;text-shadow:1px 1px 0 #38708A;font-family:coda;margin:0 5px;display:inline-block;vertical-align:middle}
+input#bg_clr,input#t_clr{width:60px}
+input.sldr-ckb{position:absolute;right:87px;top:7px}
+div#tltp-div{position:relative;z-index:2}

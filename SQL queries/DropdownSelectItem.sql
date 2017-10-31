@@ -1,0 +1,1 @@
+SELECT Id, district_name FROM District ORDER BY CASE WHEN district_name = 'Trivandrum' THEN 0 ELSE 1 END ASC, district_name ASC

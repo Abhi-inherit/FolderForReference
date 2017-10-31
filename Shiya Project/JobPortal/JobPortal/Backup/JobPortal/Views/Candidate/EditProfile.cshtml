@@ -1,0 +1,182 @@
+﻿@model JobPortal.Models.Candidate
+
+<script src="@Url.Content("~/Scripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+ @using (@Html.BeginForm("EditProfile", "Candidate", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+    @Html.ValidationSummary(true)
+    <table>
+      
+        <tr>
+            <td>
+                 <div class="editor-label">
+            @Html.LabelFor(model => model.Cand_Name)
+        </div>
+            </td>
+            <td>
+                 <div class="editor-field">
+            @Html.EditorFor(model => model.Cand_Name)
+            @Html.ValidationMessageFor(model => model.Cand_Name)
+        </div>
+            </td>
+        </tr>
+       <tr>
+           <td>
+               <div class="editor-label">
+            @Html.LabelFor(model => model.Cand_CategoryId)
+        </div>
+           </td>
+           <td>
+                <div class="editor-field">
+            @Html.DropDownList("Sel_Category",ViewBag.Category as List<SelectListItem>,new { @name = "Sel_Category" } )
+            @Html.ValidationMessageFor(model => model.Cand_CategoryId)
+        </div>
+           </td>
+       </tr>
+       
+        <tr>
+            <td>
+                 <div class="editor-label">
+            @Html.LabelFor(model => model.Cand_LocationId)
+        </div>
+            </td>
+            <td>
+        <div class="editor-field">
+            @Html.DropDownList("Sel_Location", ViewBag.Location as List<SelectListItem>, new { @name = "Sel_Location" })
+            @Html.ValidationMessageFor(model => model.Cand_LocationId)
+        </div>
+            </td>
+        </tr>
+        
+       <tr>
+           <td>
+               <div class="editor-label">
+            @Html.LabelFor(model => model.Cand_ExpLevelId)
+        </div>
+           </td>
+           <td>
+        <div class="editor-field">
+           @Html.DropDownList("Sel_Experience",ViewBag.Experience as List<SelectListItem>,new { @name = "Sel_Experience" })
+            @Html.ValidationMessageFor(model => model.Cand_ExpLevelId)
+        </div>
+           </td>
+       </tr>
+
+       <tr>
+           <td>
+                 <div class="editor-label">
+            @Html.LabelFor(model => model.Cand_UserName)
+        </div>
+           </td>
+           <td>
+               <div class="editor-field">
+            @Html.EditorFor(model => model.Cand_UserName)
+            @Html.ValidationMessageFor(model => model.Cand_UserName)
+        </div>
+           </td>
+       </tr>
+       <tr>
+           <td>
+                <div class="editor-label">
+            @Html.LabelFor(model => model.Cand_Password)
+        </div>
+           </td>
+           <td>
+               <div class="editor-field">
+            @Html.EditorFor(model => model.Cand_Password)
+            @Html.ValidationMessageFor(model => model.Cand_Password)
+        </div>
+           </td>
+       </tr>
+        <tr>
+        <td>
+             <div class="editor-label">
+            @Html.LabelFor(model => model.Cand_EmailId)
+        </div>
+        </td>
+            <td>
+                <div class="editor-field">
+            @Html.EditorFor(model => model.Cand_EmailId)
+            @Html.ValidationMessageFor(model => model.Cand_EmailId)
+        </div>
+
+            </td>
+        </tr>
+
+      <tr>
+          <td>
+               <div class="editor-label">
+            @Html.LabelFor(model => model.Cand_MobileNumber)
+        </div>
+          </td>
+          <td>
+              <div class="editor-field">
+            @Html.EditorFor(model => model.Cand_MobileNumber)
+            @Html.ValidationMessageFor(model => model.Cand_MobileNumber)
+        </div>
+          </td>
+      </tr>
+        <tr>
+            <td>
+                  <div class="editor-label">
+            @Html.LabelFor(model => model.Cand_Address)
+        </div>
+            </td>
+            <td>
+                  <div class="editor-field">
+            @Html.EditorFor(model => model.Cand_Address)
+            @Html.ValidationMessageFor(model => model.Cand_Address)
+        </div>
+            </td>
+        </tr>
+
+       <tr>
+           <td>
+                  <div class="editor-label">
+            @Html.LabelFor(model => model.Cand_HighestQualification)
+        </div>
+           </td>
+           <td>
+                  <div class="editor-field">
+            @Html.EditorFor(model => model.Cand_HighestQualification)
+            @Html.ValidationMessageFor(model => model.Cand_HighestQualification)
+        </div>
+           </td>
+       </tr>
+        
+        <tr>
+            <td>
+                 <div class="editor-label">
+            @Html.LabelFor(model => model.Cand_SkillDescription)
+        </div>
+            </td>
+            <td>
+                 <div class="editor-field">
+            @Html.EditorFor(model => model.Cand_SkillDescription)
+            @Html.ValidationMessageFor(model => model.Cand_SkillDescription)
+        </div>
+            </td>
+        </tr>
+       
+        <tr>
+            <td>
+                      <div class="editor-label">
+            @Html.LabelFor(model => model.Cand_Resume)
+        </div>
+            </td>
+            <td>
+                   <div class="editor-field">
+            @Html.LabelFor(model => model.Cand_Resume)
+            <input type="file" id="file1" name="file1" />
+        </div>
+            </td>
+        </tr>
+     <tr><td><input type="submit" value="Save" /></td></tr>
+    </table>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

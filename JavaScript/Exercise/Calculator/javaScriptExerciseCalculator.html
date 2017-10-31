@@ -1,0 +1,596 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Javascript Calculator</title>
+    <script type="text/javascript">
+        var tr;
+        function dot1(x) {
+            
+            if (document.forms["myForm"]["txt2"].value == '')
+            {
+                document.forms["myForm"]["txt2"].value = '.';
+            }
+            else if (document.forms["myForm"]["txt2"].value != '')
+            {
+                var s = document.forms["myForm"]["txt2"].value;
+                var k = s.indexOf('.');
+                if (k=='-1') {
+                    document.forms["myForm"]["txt2"].value = document.forms["myForm"]["txt2"].value;
+                    document.forms["myForm"]["txt2"].value += '.';
+                }
+                else {
+                }
+            }
+           
+            
+        }
+        function number(x)
+        {
+          
+            if (tr == '1') {
+                document.forms["myForm"]["txt2"].value = '';
+                tr = '';
+                if (x == 0) {
+
+                    if (document.forms["myForm"]["txt2"].value != '0') {
+                        document.forms["myForm"]["txt2"].value += '0';
+                        return false;
+                    }
+                    else if (document.forms["myForm"]["txt2"].value == '0') {
+                        document.forms["myForm"]["txt2"].value = '';
+                        document.forms["myForm"]["txt2"].value = x;
+                        return false;
+                    }
+                    else {
+
+                    }
+                }
+                else if (document.forms["myForm"]["txt2"].value == '') {
+                    document.forms["myForm"]["txt2"].value = x;
+                }
+                else {
+
+                    if (document.forms["myForm"]["txt2"].value == '0') {
+                        document.forms["myForm"]["txt2"].value = '';
+                        document.forms["myForm"]["txt2"].value = x;
+                    }
+                    else
+                        document.forms["myForm"]["txt2"].value += x;
+                }
+            }
+            else {
+                if (x == 0) {
+
+                    if (document.forms["myForm"]["txt2"].value != '0') {
+                        document.forms["myForm"]["txt2"].value += '0';
+                        return false;
+                    }
+                    else if (document.forms["myForm"]["txt2"].value == '0') {
+                        document.forms["myForm"]["txt2"].value = '';
+                        document.forms["myForm"]["txt2"].value = x;
+                        return false;
+                    }
+                    else {
+
+                    }
+                }
+                else if (document.forms["myForm"]["txt2"].value == '') {
+                    document.forms["myForm"]["txt2"].value = x;
+                }
+                else {
+
+                    if (document.forms["myForm"]["txt2"].value == '0') {
+                        document.forms["myForm"]["txt2"].value = '';
+                        document.forms["myForm"]["txt2"].value = x;
+                    }
+                    else
+                        document.forms["myForm"]["txt2"].value += x;
+                }
+            }
+       }
+
+        function add()
+        {
+            var e = document.forms["myForm"]["txt1"].value.slice(-1);
+            if (document.forms["myForm"]["txt1"].value == '')
+            {
+                document.forms["myForm"]["txt1"].value = document.forms["myForm"]["txt2"].value;
+                document.forms["myForm"]["txt1"].value += document.forms["myForm"]["plu"].value;
+                document.forms["myForm"]["txt2"].value = '';
+                document.getElementById("txt2").focus();
+                return false
+            }
+            else if (e == '+')
+            {
+                var k = document.forms["myForm"]["txt1"].value;
+                var a = k.substring(0, k.length - 1);
+                document.forms["myForm"]["txt1"].value = a;
+                document.forms["myForm"]["txt1"].value += document.forms["myForm"]["plu"].value;
+                document.forms["myForm"]["txt1"].value += document.forms["myForm"]["txt2"].value;
+                document.forms["myForm"]["txt2"].value = '';
+                document.forms["myForm"]["txt1"].value += document.forms["myForm"]["plu"].value;
+               var f = document.forms["myForm"]["txt1"].value.slice(-2);
+               if (f == '++')
+               {
+                   var t = document.forms["myForm"]["txt1"].value;
+                   var e = k.substring(0, k.length - 1);
+                   document.forms["myForm"]["txt1"].value = e;
+                   document.forms["myForm"]["txt1"].value += document.forms["myForm"]["plu"].value;
+                   return false
+               }
+               document.forms["myForm"]["txt2"].value = '';
+               document.getElementById("txt2").focus();
+               return false
+            }
+            else if (e == '-') {
+                if (document.forms["myForm"]["txt2"].value == '') {
+                    var k = document.forms["myForm"]["txt1"].value.slice(0, -1);
+                    document.forms["myForm"]["txt1"].value = k;
+                    document.forms["myForm"]["txt1"].value += document.forms["myForm"]["plu"].value;
+                    document.forms["myForm"]["txt1"].value += document.forms["myForm"]["txt2"].value;
+                    document.forms["myForm"]["txt2"].value = '';
+                    document.getElementById("txt2").focus();
+                    return false
+                }
+                else {
+                    document.forms["myForm"]["txt1"].value += document.forms["myForm"]["txt2"].value;
+                    document.forms["myForm"]["txt1"].value += document.forms["myForm"]["plu"].value;
+                    document.forms["myForm"]["txt2"].value = '';
+                    document.getElementById("txt2").focus();
+                }
+            }
+            else if (e == '/') {
+                if (document.forms["myForm"]["txt2"].value == '') {
+                    var k = document.forms["myForm"]["txt1"].value.slice(0, -1);
+                    document.forms["myForm"]["txt1"].value = k;
+                    document.forms["myForm"]["txt1"].value += document.forms["myForm"]["plu"].value;
+                    document.forms["myForm"]["txt1"].value += document.forms["myForm"]["txt2"].value;
+                    document.forms["myForm"]["txt2"].value = '';
+                    document.getElementById("txt2").focus();
+                    return false
+                }
+                else {
+                    document.forms["myForm"]["txt1"].value += document.forms["myForm"]["txt2"].value;
+                    document.forms["myForm"]["txt1"].value += document.forms["myForm"]["plu"].value;
+                    document.forms["myForm"]["txt2"].value = '';
+                    document.getElementById("txt2").focus();
+                }
+            }
+            else if (e == '*') {
+                if (document.forms["myForm"]["txt2"].value == '') {
+                var k = document.forms["myForm"]["txt1"].value.slice(0, -1);
+                document.forms["myForm"]["txt1"].value = k;
+                document.forms["myForm"]["txt1"].value += document.forms["myForm"]["plu"].value;
+                document.forms["myForm"]["txt1"].value += document.forms["myForm"]["txt2"].value;
+                document.forms["myForm"]["txt2"].value = '';
+                document.getElementById("txt2").focus();
+                return false
+                }
+                else {
+                    document.forms["myForm"]["txt1"].value += document.forms["myForm"]["txt2"].value;
+                    document.forms["myForm"]["txt1"].value += document.forms["myForm"]["plu"].value;
+                    document.forms["myForm"]["txt2"].value = '';
+                    document.getElementById("txt2").focus();
+                }
+            }
+            else if (e != '+')
+            {
+                document.forms["myForm"]["txt1"].value = mt;
+                document.forms["myForm"]["txt1"].value += document.forms["myForm"]["plu"].value;
+                document.forms["myForm"]["txt1"].value += document.forms["myForm"]["txt2"].value;
+                document.forms["myForm"]["txt2"].value = '';
+                document.getElementById("txt2").focus();
+                return false
+            }
+            else
+            {
+                return true
+            }
+        }
+
+        function sub1()
+        {
+            var e = document.forms["myForm"]["txt1"].value.slice(-1);
+            if (document.forms["myForm"]["txt1"].value == '') {
+                document.forms["myForm"]["txt1"].value = document.forms["myForm"]["txt2"].value;
+                document.forms["myForm"]["txt1"].value += document.forms["myForm"]["min"].value;
+                document.forms["myForm"]["txt2"].value = '';
+                document.getElementById("txt2").focus();
+                return false
+            }
+            else if (e == '-') {
+                var k = document.forms["myForm"]["txt1"].value;
+                var a = k.substring(0, k.length - 1);
+                document.forms["myForm"]["txt1"].value = a;
+                document.forms["myForm"]["txt1"].value += document.forms["myForm"]["min"].value;
+                document.forms["myForm"]["txt1"].value += document.forms["myForm"]["txt2"].value;
+                document.forms["myForm"]["txt2"].value = '';
+                document.forms["myForm"]["txt1"].value += document.forms["myForm"]["min"].value;
+                var f = document.forms["myForm"]["txt1"].value.slice(-2);
+                if (f == '--') {
+                    var t = document.forms["myForm"]["txt1"].value;
+                    var e = k.substring(0, k.length - 1);
+                    document.forms["myForm"]["txt1"].value = e;
+                    document.forms["myForm"]["txt1"].value += document.forms["myForm"]["min"].value;
+                    return false
+                }
+                document.forms["myForm"]["txt2"].value = '';
+                document.getElementById("txt2").focus();
+                return false
+            }
+            else if (e == '+') {
+                if (document.forms["myForm"]["txt2"].value=='')
+                {
+                var k = document.forms["myForm"]["txt1"].value.slice(0, -1);
+                document.forms["myForm"]["txt1"].value = k;
+                document.forms["myForm"]["txt1"].value += document.forms["myForm"]["min"].value;
+                document.forms["myForm"]["txt1"].value += document.forms["myForm"]["txt2"].value;
+                document.forms["myForm"]["txt2"].value = '';
+                document.getElementById("txt2").focus();
+                return false
+                }
+                else
+                {
+                    document.forms["myForm"]["txt1"].value += document.forms["myForm"]["txt2"].value;
+                    document.forms["myForm"]["txt1"].value += document.forms["myForm"]["min"].value;
+                    document.forms["myForm"]["txt2"].value = '';
+                    document.getElementById("txt2").focus();
+                }
+            }
+            else if (e == '/') {
+                if (document.forms["myForm"]["txt2"].value == '') {
+                    var k = document.forms["myForm"]["txt1"].value.slice(0, -1);
+                    document.forms["myForm"]["txt1"].value = k;
+                    document.forms["myForm"]["txt1"].value += document.forms["myForm"]["min"].value;
+                    document.forms["myForm"]["txt1"].value += document.forms["myForm"]["txt2"].value;
+                    document.forms["myForm"]["txt2"].value = '';
+                    document.getElementById("txt2").focus();
+                    return false
+                }
+                else {
+                    document.forms["myForm"]["txt1"].value += document.forms["myForm"]["txt2"].value;
+                    document.forms["myForm"]["txt1"].value += document.forms["myForm"]["min"].value;
+                    document.forms["myForm"]["txt2"].value = '';
+                    document.getElementById("txt2").focus();
+                }
+            }
+            else if (e == '*') {
+                if (document.forms["myForm"]["txt2"].value == '') {
+                    var k = document.forms["myForm"]["txt1"].value.slice(0, -1);
+                    document.forms["myForm"]["txt1"].value = k;
+                    document.forms["myForm"]["txt1"].value += document.forms["myForm"]["min"].value;
+                    document.forms["myForm"]["txt1"].value += document.forms["myForm"]["txt2"].value;
+                    document.forms["myForm"]["txt2"].value = '';
+                    document.getElementById("txt2").focus();
+                    return false
+                }
+                else {
+                    document.forms["myForm"]["txt1"].value += document.forms["myForm"]["txt2"].value;
+                    document.forms["myForm"]["txt1"].value += document.forms["myForm"]["min"].value;
+                    document.forms["myForm"]["txt2"].value = '';
+                    document.getElementById("txt2").focus();
+                }
+            }
+            else if (e != '-') {
+                document.forms["myForm"]["txt1"].value = mt;
+                document.forms["myForm"]["txt1"].value += document.forms["myForm"]["min"].value;
+                document.forms["myForm"]["txt1"].value += document.forms["myForm"]["txt2"].value;
+                document.forms["myForm"]["txt2"].value = '';
+                document.getElementById("txt2").focus();
+                return false
+            }
+            else {
+                return true
+            }
+        }
+
+        function mul1() {
+            var e = document.forms["myForm"]["txt1"].value.slice(-1);
+            if (document.forms["myForm"]["txt1"].value == '') {
+                document.forms["myForm"]["txt1"].value = document.forms["myForm"]["txt2"].value;
+                document.forms["myForm"]["txt1"].value += document.forms["myForm"]["mul"].value;
+                document.forms["myForm"]["txt2"].value = '';
+                document.getElementById("txt2").focus();
+                return false
+            }
+            else if (e == '*') {
+                var k = document.forms["myForm"]["txt1"].value;
+                var a = k.substring(0, k.length - 1);
+                document.forms["myForm"]["txt1"].value = a;
+                document.forms["myForm"]["txt1"].value += document.forms["myForm"]["mul"].value;
+                document.forms["myForm"]["txt1"].value += document.forms["myForm"]["txt2"].value;
+                document.forms["myForm"]["txt2"].value = '';
+                document.forms["myForm"]["txt1"].value += document.forms["myForm"]["mul"].value;
+                var f = document.forms["myForm"]["txt1"].value.slice(-2);
+                if (f == '**') {
+                    var t = document.forms["myForm"]["txt1"].value;
+                    var e = k.substring(0, k.length - 1);
+                    document.forms["myForm"]["txt1"].value = e;
+                    document.forms["myForm"]["txt1"].value += document.forms["myForm"]["mul"].value;
+                    return false
+                }
+                document.forms["myForm"]["txt2"].value = '';
+                document.getElementById("txt2").focus();
+                return false
+            }
+            else if (e == '-') {
+                if (document.forms["myForm"]["txt2"].value == '') {
+                var k = document.forms["myForm"]["txt1"].value.slice(0, -1);
+                document.forms["myForm"]["txt1"].value = k;
+                document.forms["myForm"]["txt1"].value += document.forms["myForm"]["mul"].value;
+                document.forms["myForm"]["txt1"].value += document.forms["myForm"]["txt2"].value;
+                document.forms["myForm"]["txt2"].value = '';
+                document.getElementById("txt2").focus();
+                return false
+                }
+                else {
+                    document.forms["myForm"]["txt1"].value += document.forms["myForm"]["txt2"].value;
+                    document.forms["myForm"]["txt1"].value += document.forms["myForm"]["mul"].value;
+                    document.forms["myForm"]["txt2"].value = '';
+                    document.getElementById("txt2").focus();
+                }
+            }
+            else if (e == '/') {
+                if (document.forms["myForm"]["txt2"].value == '') {
+                var k = document.forms["myForm"]["txt1"].value.slice(0, -1);
+                document.forms["myForm"]["txt1"].value = k;
+                document.forms["myForm"]["txt1"].value += document.forms["myForm"]["mul"].value;
+                document.forms["myForm"]["txt1"].value += document.forms["myForm"]["txt2"].value;
+                document.forms["myForm"]["txt2"].value = '';
+                document.getElementById("txt2").focus();
+                return false
+                }
+                else {
+                    document.forms["myForm"]["txt1"].value += document.forms["myForm"]["txt2"].value;
+                    document.forms["myForm"]["txt1"].value += document.forms["myForm"]["mul"].value;
+                    document.forms["myForm"]["txt2"].value = '';
+                    document.getElementById("txt2").focus();
+                }
+            }
+            else if (e == '+') {
+                if (document.forms["myForm"]["txt2"].value == '') {
+                var k = document.forms["myForm"]["txt1"].value.slice(0, -1);
+                document.forms["myForm"]["txt1"].value = k;
+                document.forms["myForm"]["txt1"].value += document.forms["myForm"]["mul"].value;
+                document.forms["myForm"]["txt1"].value += document.forms["myForm"]["txt2"].value;
+                document.forms["myForm"]["txt2"].value = '';
+                document.getElementById("txt2").focus();
+                return false
+                }
+                else {
+                    document.forms["myForm"]["txt1"].value += document.forms["myForm"]["txt2"].value;
+                    document.forms["myForm"]["txt1"].value += document.forms["myForm"]["mul"].value;
+                    document.forms["myForm"]["txt2"].value = '';
+                    document.getElementById("txt2").focus();
+                }
+            }
+            else if (e != '*') {
+                document.forms["myForm"]["txt1"].value = mt;
+                document.forms["myForm"]["txt1"].value += document.forms["myForm"]["mul"].value;
+                document.forms["myForm"]["txt1"].value += document.forms["myForm"]["txt2"].value;
+                document.forms["myForm"]["txt2"].value = '';
+                document.getElementById("txt2").focus();
+                return false
+            }
+            else {
+                return true
+            }
+        }
+
+        function div1() {
+            var e = document.forms["myForm"]["txt1"].value.slice(-1);
+            if (document.forms["myForm"]["txt1"].value == '') {
+                document.forms["myForm"]["txt1"].value = document.forms["myForm"]["txt2"].value;
+                document.forms["myForm"]["txt1"].value += document.forms["myForm"]["divi"].value;
+                document.forms["myForm"]["txt2"].value = '';
+                document.getElementById("txt2").focus();
+                return false
+            }
+            else if (e == '/') {
+                var k = document.forms["myForm"]["txt1"].value;
+                var a = k.substring(0, k.length - 1);
+                document.forms["myForm"]["txt1"].value = a;
+                document.forms["myForm"]["txt1"].value += document.forms["myForm"]["divi"].value;
+                document.forms["myForm"]["txt1"].value += document.forms["myForm"]["txt2"].value;
+                document.forms["myForm"]["txt2"].value = '';
+                document.forms["myForm"]["txt1"].value += document.forms["myForm"]["divi"].value;
+                var f = document.forms["myForm"]["txt1"].value.slice(-2);
+                if (f == '//') {
+                    var t = document.forms["myForm"]["txt1"].value;
+                    var e = k.substring(0, k.length - 1);
+                    document.forms["myForm"]["txt1"].value = e;
+                    document.forms["myForm"]["txt1"].value += document.forms["myForm"]["divi"].value;
+                    return false
+                }
+                document.forms["myForm"]["txt2"].value = '';
+                document.getElementById("txt2").focus();
+                return false
+            }
+            else if (e == '-') {
+                if (document.forms["myForm"]["txt2"].value == '') {
+                var k = document.forms["myForm"]["txt1"].value.slice(0, -1);
+                document.forms["myForm"]["txt1"].value = k;
+                document.forms["myForm"]["txt1"].value += document.forms["myForm"]["divi"].value;
+                document.forms["myForm"]["txt1"].value += document.forms["myForm"]["txt2"].value;
+                document.forms["myForm"]["txt2"].value = '';
+                document.getElementById("txt2").focus();
+                return false
+                }
+                else {
+                    document.forms["myForm"]["txt1"].value += document.forms["myForm"]["txt2"].value;
+                    document.forms["myForm"]["txt1"].value += document.forms["myForm"]["divi"].value;
+                    document.forms["myForm"]["txt2"].value = '';
+                    document.getElementById("txt2").focus();
+                }
+
+            }
+            else if (e == '+') {
+                if (document.forms["myForm"]["txt2"].value == '') {
+                var k = document.forms["myForm"]["txt1"].value.slice(0, -1);
+                document.forms["myForm"]["txt1"].value = k;
+                document.forms["myForm"]["txt1"].value += document.forms["myForm"]["divi"].value;
+                document.forms["myForm"]["txt1"].value += document.forms["myForm"]["txt2"].value;
+                document.forms["myForm"]["txt2"].value = '';
+                document.getElementById("txt2").focus();
+                return false
+                }
+                else {
+                    document.forms["myForm"]["txt1"].value += document.forms["myForm"]["txt2"].value;
+                    document.forms["myForm"]["txt1"].value += document.forms["myForm"]["divi"].value;
+                    document.forms["myForm"]["txt2"].value = '';
+                    document.getElementById("txt2").focus();
+                }
+            }
+            else if (e == '*') {
+                if (document.forms["myForm"]["txt2"].value == '') {
+                var k = document.forms["myForm"]["txt1"].value.slice(0, -1);
+                document.forms["myForm"]["txt1"].value = k;
+                document.forms["myForm"]["txt1"].value += document.forms["myForm"]["divi"].value;
+                document.forms["myForm"]["txt1"].value += document.forms["myForm"]["txt2"].value;
+                document.forms["myForm"]["txt2"].value = '';
+                document.getElementById("txt2").focus();
+                return false
+                }
+                else {
+                    document.forms["myForm"]["txt1"].value += document.forms["myForm"]["txt2"].value;
+                    document.forms["myForm"]["txt1"].value += document.forms["myForm"]["divi"].value;
+                    document.forms["myForm"]["txt2"].value = '';
+                    document.getElementById("txt2").focus();
+                }
+            }
+            else if (e != '/') {
+                document.forms["myForm"]["txt1"].value = mt;
+                document.forms["myForm"]["txt1"].value += document.forms["myForm"]["divi"].value;
+                document.forms["myForm"]["txt1"].value += document.forms["myForm"]["txt2"].value;
+                document.forms["myForm"]["txt2"].value = '';
+                document.getElementById("txt2").focus();
+                return false
+            }
+            else {
+                return true
+            }
+        }
+        
+        function result()
+        {
+            if (document.forms["myForm"]["txt2"].value == '') {
+                alert('Wrong Mathematical equation entered')
+
+            }
+            else { 
+            var res = document.forms["myForm"]["txt1"].value += document.forms["myForm"]["txt2"].value;
+            var r = eval(res);
+           
+                document.forms["myForm"]["txt2"].value = r;
+                document.forms["myForm"]["txt1"].value = '';
+                tr = 1;
+               }
+           
+           
+            
+        }
+
+        function clearAc()
+        {
+            document.forms["myForm"]["txt2"].value = ''
+            document.forms["myForm"]["txt1"].value = ''
+        }
+
+        function clf()
+        {
+            var m = document.forms["myForm"]["txt2"].value
+            var mt = m.slice(0, -1);
+            document.forms["myForm"]["txt2"].value = mt;
+        }
+    </script>
+</head>
+<body>
+    <form name="myForm">
+    <br /><br />
+    <table align="center" style="width:230px; background-color:#BFEBF1" border="1">
+        <tr style="height:48px;">
+            <td align="center">
+                 <input type="text" style="width:210px; height:30px; border:0px; text-align:right;" disabled="disabled" name="txt1"/>
+                <input type="text" style="width:210px; height:30px; border:0px; text-align:right; font-size:40px;" disabled="disabled" name="txt2" />
+            </td>
+        </tr>
+    </table>
+    <table align="center" style="width:230px" border="1">
+        <tr style="height:45px;">
+            <td align="center" style="background-color:#DED1E5">
+                <input type="button" style="width:35px; height:35px" value="7" name="sev" id="sev" onclick="number(7)"/>
+            </td>
+             <td align="center" style="background-color:#DED1E5">
+                <input type="button" style="width:35px; height:35px" value="8" name="eig" id="eig" onclick="number(8)"/>
+            </td>
+            <td align="center" style="background-color:#DED1E5">
+                <input type="button" style="width:35px; height:35px" value="9" name="nin" id="nin" onclick="number(9)"/>
+            </td>
+            <td align="center" style="background-color:#DED1E5">
+                <input type="button" style="width:35px; height:35px" value="/" name="divi" id="divi" onclick="div1()"/>
+            </td>
+        </tr>
+
+        <tr style="height:45px;">
+            <td align="center" style="background-color:#DED1E5">
+                <input type="button" style="width:35px; height:35px" value="4" name="for" id="for" onclick="number(4)"/>
+            </td>
+             <td align="center" style="background-color:#DED1E5">
+                <input type="button" style="width:35px; height:35px" value="5" name="fiv" id="fiv" onclick="number(5)"/>
+            </td>
+            <td align="center" style="background-color:#DED1E5">
+                <input type="button" style="width:35px; height:35px" value="6" name="six" id="six" onclick="number(6)"/>
+            </td>
+            <td align="center" style="background-color:#DED1E5">
+                <input type="button" style="width:35px; height:35px" value="*" name="mul" id="mul" onclick="mul1()"/>
+            </td>
+        </tr>
+
+         <tr style="height:45px;">
+            <td align="center" style="background-color:#DED1E5">
+                <input type="button" style="width:35px; height:35px" value="1" name="one" id="one" onclick="number(1)"/>
+            </td>
+             <td align="center" style="background-color:#DED1E5">
+                <input type="button" style="width:35px; height:35px" value="2" name="two" id="two" onclick="number(2)"/>
+            </td>
+            <td align="center" style="background-color:#DED1E5">
+                <input type="button" style="width:35px; height:35px" value="3" name="three" id="three" onclick="number(3)"/>
+            </td>
+            <td align="center" style="background-color:#DED1E5">
+                <input type="button" style="width:35px; height:35px" value="-" name="min" id="min" onclick="sub1()"/>
+            </td>
+        </tr>
+       
+    </table>
+    <table align="center" style="width:230px" border="1">
+        <tr style="height:45px;">
+            <td align="center" style="background-color:#DED1E5">
+                <input type="button" style="width:50px; height:35px" value="0" name="zer" id="zer" onclick="number('0')"/>
+            </td>
+             <td align="center" style="background-color:#D3B1E4">
+                <input type="button" style="width:50px; height:35px" value="." name="dot" id="dot" onclick="dot1('.')"/>
+            </td>
+            <td align="center" style="background-color:#DED1E5">
+                <input type="button" style="width:50px; height:35px" value="+" name="plu" id="plu" onclick="add()"/>
+            </td>
+            </tr>
+        </table>
+
+    <table align="center" style="width:230px" border="1">
+        <tr style="height:45px;">
+            <td align="center" style="background-color:#E0BAD0">
+                <input type="button" style="width:50px; height:35px" value="Clear" name="c" id="c" onclick="clf()"/>
+            </td>
+            <td align="center" style="background-color:#E0BAD0">
+                <input type="button" style="width:50px; height:35px" value="AC" name="ac" id="ac" onclick="clearAc()"/>
+            </td>
+             <td align="center" style="background-color:#E0BAD0">
+                <input type="button" style="width:50px; height:35px" value="=" name="equ" id="equ" onclick="result()" onchange="ded()"/>
+            </td>
+            </tr>
+        </table>
+        </form>
+</body>
+</html>

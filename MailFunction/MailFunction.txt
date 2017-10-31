@@ -1,0 +1,22 @@
+ MailMessage msg = new MailMessage();
+ msg.To.Add(TextBox3.Text.Trim().ToString());
+ MailAddress address = new MailAddress(TextBox3.Text.Trim().ToString());
+ msg.From = address;
+ msg.Subject = TextBox1.Text + " :  " + TextBox2.Text;
+ msg.Body = TextBox1.Text;
+ SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
+ client.EnableSsl = true;
+ NetworkCredential credentials = new NetworkCredential("nivinjose9847@gmail.com", "password");
+ client.Credentials = credentials;
+ client.Send(msg);    
+
+
+web.config
+ <system.net>
+    <mailSettings>
+      <smtp from="nivinjose9847@gmail.com">
+        <network host="smtp.gmail.com" port="587" userName="nivinjose9847" password="password" defaultCredentials="false"  enableSsl="true"  />
+      </smtp>
+    </mailSettings>
+</system.net>
+

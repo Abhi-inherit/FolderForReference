@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<!-- saved from url=(0059)https://rainsoft.io/6-ways-to-declare-javascript-functions/ -->
+<html class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<title>Six ways to declare JavaScript functions</title>
+	<meta name="description" content="JavaScript allows to declare functions in 6 ways. The article describes how to choose the right declaration type, depending on the situation and function purpose.">
+
+	<meta name="HandheldFriendly" content="True">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="./Six ways to declare JavaScript functions_files/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" type="text/css" href="./Six ways to declare JavaScript functions_files/style.css">
+
+  <link rel="shortcut icon" href="https://rainsoft.io/favicon.ico">
+
+	<link rel="canonical" href="https://rainsoft.io/6-ways-to-declare-javascript-functions/">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="amphtml" href="https://rainsoft.io/6-ways-to-declare-javascript-functions/amp/">
+    
+    <meta property="og:site_name" content="Thoughts on JavaScript &amp; Swift by Dmitri Pavlutin">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Six ways to declare JavaScript functions">
+    <meta property="og:description" content="JavaScript allows to declare functions in 6 ways. The article describes how to choose the right declaration type, depending on the situation and function purpose.">
+    <meta property="og:url" content="https://rainsoft.io/6-ways-to-declare-javascript-functions/">
+    <meta property="og:image" content="https://rainsoft.io/content/images/2016/06/FINAL_THEWEST_unicol_jet.jpg">
+    <meta property="article:published_time" content="2016-06-22T10:26:31.000Z">
+    <meta property="article:modified_time" content="2017-04-22T13:25:01.000Z">
+    <meta property="article:tag" content="javascript">
+    <meta property="article:tag" content="function">
+    <meta property="article:tag" content="declaration">
+    <meta property="article:tag" content="arrow function">
+    <meta property="article:tag" content="ecmascript-2015">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Six ways to declare JavaScript functions">
+    <meta name="twitter:description" content="JavaScript allows to declare functions in 6 ways. The article describes how to choose the right declaration type, depending on the situation and function purpose.">
+    <meta name="twitter:url" content="https://rainsoft.io/6-ways-to-declare-javascript-functions/">
+    <meta name="twitter:image" content="https://rainsoft.io/content/images/2016/06/FINAL_THEWEST_unicol_jet.jpg">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Dmitri Pavlutin">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="javascript, function, declaration, arrow function, ecmascript-2015">
+    <meta name="twitter:creator" content="@panzerdp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="888">
+    
+    <script id="twitter-wjs" src="./Six ways to declare JavaScript functions_files/widgets.js.download"></script><script async="" src="./Six ways to declare JavaScript functions_files/analytics.js.download"></script><script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Thoughts on JavaScript &amp; Swift by Dmitri Pavlutin",
+        "logo": "https://rainsoft.io/content/images/2015/08/logo-128x128-1.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Dmitri Pavlutin",
+        "image": {
+            "@type": "ImageObject",
+            "url": "//www.gravatar.com/avatar/0d57a57d8807ebc70e24b46f6d9e3a36?s=250&d=mm&r=x",
+            "width": 250,
+            "height": 250
+        },
+        "url": "https://rainsoft.io/author/dmitri-pavlutin/",
+        "sameAs": [
+            "https://twitter.com/panzerdp"
+        ],
+        "description": "Web developer. JavaScript languages fan. I enjoy coding, blogging, learning, open sourcing and solving problems."
+    },
+    "headline": "Six ways to declare JavaScript functions",
+    "url": "https://rainsoft.io/6-ways-to-declare-javascript-functions/",
+    "datePublished": "2016-06-22T10:26:31.000Z",
+    "dateModified": "2017-04-22T13:25:01.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://rainsoft.io/content/images/2016/06/FINAL_THEWEST_unicol_jet.jpg",
+        "width": 1200,
+        "height": 888
+    },
+    "keywords": "javascript, function, declaration, arrow function, ecmascript-2015",
+    "description": "JavaScript allows to declare functions in 6 ways. The article describes how to choose the right declaration type, depending on the situation and function purpose.",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://rainsoft.io"
+    }
+}
+    </script>
+
+    <script type="text/javascript" src="./Six ways to declare JavaScript functions_files/ghost-url.min.js.download"></script>
+<script type="text/javascript">
+ghost.init({
+	clientId: "ghost-frontend",
+	clientSecret: "f8020dc4e157"
+});
+</script>
+    <meta name="generator" content="Ghost 0.11">
+    <link rel="alternate" type="application/rss+xml" title="Thoughts on JavaScript &amp; Swift by Dmitri Pavlutin" href="https://rainsoft.io/rss/">
+    <style>
+    code {
+      color: #555555;
+      font-weight: bold;
+    }
+    
+    pre code {
+      font-weight: normal;
+    }
+</style>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-66648045-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<script>
+  // Insert about me link into post author short bio
+  window.addEventListener('load', function() {
+     jQuery('.post-author-about')
+         .append(' <a href="/about-me/" class="about-me">About me</a>')
+         .append('<br/><a class="twitter-follow-button" href="https://twitter.com/panzerdp">Follow @panzerdp</a>');
+     // insert twitter widget
+    window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+ 
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+ 
+  return t;
+}(document, "script", "twitter-wjs"));
+  });
+</script>
+<script type="text/javascript" async="" src="./Six ways to declare JavaScript functions_files/embed.js.download"></script><style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style><link rel="preload" as="style" href="https://c.disquscdn.com/next/embed/styles/lounge.a219a5731bfdc6a1d16fa492c1ac36e9.css"><link rel="preload" as="script" href="https://c.disquscdn.com/next/embed/common.bundle.77a6c478a864866eea281250672483fe.js"><link rel="preload" as="script" href="https://c.disquscdn.com/next/embed/lounge.bundle.78b79239e8800d4a4a0ddc724c2e746f.js"><link rel="preload" as="script" href="https://disqus.com/next/config.js"><script type="text/javascript" charset="utf-8" async="" src="./Six ways to declare JavaScript functions_files/button.fbaa419ee3b1f63d563b4dc1677c1aa4.js.download"></script></head>
+
+<body class="post-template tag-javascript tag-function tag-declaration tag-arrow-function tag-ecmascript-2015">
+
+	<nav id="menu">
+	<a class="close-button">Close</a>
+	<div class="nav-wrapper">
+		<p class="nav-label">Menu</p>
+		<ul>
+			<li class="nav-home" role="presentation"><a href="https://rainsoft.io/">Home</a></li>
+			<li class="nav-archive" role="presentation"><a href="https://rainsoft.io/archive-post/">Archive</a></li>
+			<li class="nav-about-me" role="presentation"><a href="https://rainsoft.io/about-me/">About me</a></li>
+			<li class="nav-contact-me" role="presentation"><a href="https://rainsoft.io/contact-me/">Contact me</a></li>
+			<li class="nav-rss"><a href="https://rainsoft.io/rss/"><i class="ic ic-rss"></i> Subscribe</a></li>
+		</ul>
+	</div>
+</nav>
+
+	<section id="wrapper">
+		<a class="hidden-close"></a>
+		
+
+  <div class="progress-container">
+    <span class="progress-bar" style="width: 24.993%;"></span>
+  </div>
+
+  <header id="post-header" class="has-cover">
+    <div class="inner">
+      <nav id="navigation">
+          <span class="blog-logo">
+				<a href="https://rainsoft.io/"><img src="./Six ways to declare JavaScript functions_files/logo-128x128-1.png" alt="Blog Logo"></a>
+			</span>
+          <span id="menu-button" class="nav-button">
+				<a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+			</span>
+      </nav>
+      <h1 class="post-title">Six ways to declare JavaScript functions</h1>
+      <span class="post-meta"><a href="https://rainsoft.io/author/dmitri-pavlutin/">Dmitri Pavlutin</a> | <time datetime="2016-06-22">22 Jun 2016</time></span>
+        <div class="post-cover cover" style="background-image: url(&quot;/content/images/2016/06/FINAL_THEWEST_unicol_jet.jpg&quot;); transform: translate3d(0px, 1150px, 0px);"></div>
+    </div>
+  </header>
+
+  <main class="content" role="main">
+    <article class="post tag-javascript tag-function tag-declaration tag-arrow-function tag-ecmascript-2015">
+      <div class="inner">
+
+        <div class="post-share top-side">
+          <a class="twitter" href="https://twitter.com/share?text=Six%20ways%20to%20declare%20JavaScript%20functions&amp;url=https://rainsoft.io/6-ways-to-declare-javascript-functions/&amp;related=panzerdp" onclick="window.open(this.href, &#39;twitter-share&#39;, &#39;width=550,height=300&#39;);return false;">
+            <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
+          </a>
+          <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://rainsoft.io/6-ways-to-declare-javascript-functions/" onclick="window.open(this.href, &#39;facebook-share&#39;,&#39;width=580,height=296&#39;);return false;">
+            <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
+          </a>
+          <a class="googleplus" href="https://plus.google.com/share?url=https://rainsoft.io/6-ways-to-declare-javascript-functions/" onclick="window.open(this.href, &#39;google-plus-share&#39;, &#39;width=490,height=530&#39;);return false;">
+            <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
+          </a>
+        </div>
+        <div class="clear"></div>
+
+        <section class="post-content">
+          <p>A <strong>function</strong> is a parametric block of code defined one time and called any number of times later. In JavaScript a function is composed and influenced by many components:</p>
+
+<ul>
+<li>JavaScript code that forms the function body</li>
+<li>The list of function parameters</li>
+<li>The variables accessible from the outer scope</li>
+<li>The returned value</li>
+<li>The context <code>this</code> when the function is invoked</li>
+<li>Named or anonymous function</li>
+<li>The variable that holds the function object after declaration</li>
+<li><code>arguments</code> object (or its missing in an arrow function)</li>
+</ul>
+
+<p>These components affect the function behavior depending on the declaration type. In JavaScript a function can be declared using several ways: </p>
+
+<ul>
+<li><a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Statements/function">Function declaration</a></li>
+<li><a href="https://developer.mozilla.org/en/docs/web/JavaScript/Reference/Operators/function">Function expression</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Method_definitions">Shorthand method definition</a></li>
+<li><a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow function</a></li>
+<li><a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Statements/function*">Generator function</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code> constructor</a></li>
+</ul>
+
+<p>The function code has a slight impact on what declaration type to choose. Important is how the function interacts with the external components (the outer scope, the enclosing context, object that owns the method, etc) and the invocation type (regular function invocation, method invocation, constructor call, etc).</p>
+
+<p>For instance you need <code>this</code> on a function invocation to be the same as the enclosing context (i.e. inherits <code>this</code> from the outer function). The best option is to use an <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Functions/Arrow_functions">arrow function</a>, which provides the necessary context transparency. <br>
+The following example demonstrates that:  </p>
+
+<div class="try-it-container">  
+  <a target="_blank" href="http://jsbin.com/matahu/5/edit?js,console">Try in JS Bin</a>
+  <div class="clear"></div>
+</div>  
+
+<pre class=" language-javascript"><code class=" language-javascript language-javascript"><span class="token keyword">class</span> <span class="token class-name">Names</span> <span class="token punctuation">{</span>  
+  constructor <span class="token punctuation">(</span>names<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>names <span class="token operator">=</span> names<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">contains</span><span class="token punctuation">(</span>names<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> names<span class="token punctuation">.</span><span class="token function">every</span><span class="token punctuation">(</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token keyword">this</span><span class="token punctuation">.</span>names<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span> <span class="token operator">!==</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> countries <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Names</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'UK'</span><span class="token punctuation">,</span> <span class="token string">'Italy'</span><span class="token punctuation">,</span> <span class="token string">'Germany'</span><span class="token punctuation">,</span> <span class="token string">'France'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+countries<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'UK'</span><span class="token punctuation">,</span> <span class="token string">'Germany'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// =&gt; true  </span>
+countries<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'USA'</span><span class="token punctuation">,</span> <span class="token string">'Italy'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">// =&gt; false  </span>
+</code></pre>
+
+<p>The arrow function passed to <code>.every()</code> has <code>this</code> (an instance of <code>Names</code> class) the same as <code>contains()</code> method. A function declared with the fat arrow is the most appropriate declaration type in a case when the context needs to be <em>inherited</em> from the outer method <code>.contains()</code>.  </p>
+
+<p>If trying to use a function expression for <code>.every()</code> callback, it would require more manual configuration of the context. Available options are: set the second parameter of the <code>.every(function(){...}, this)</code> to indicate the context or use   <code>.bind()</code> method on the callback <code>function(){...}.bind(this)</code>. This is additional code and the arrow function provides the context transparency easier.  </p>
+
+<p>This post describes six approaches how to declare functions in JavaScript. Every type is explained in which situations it fits better and produces lighter code. Interested? Let's get started.</p>
+
+<p>Table of contents:</p>
+
+<ol>
+<li><a href="https://rainsoft.io/6-ways-to-declare-javascript-functions/#1functiondeclaration">Function declaration</a> <br>
+1.1 <a href="https://rainsoft.io/6-ways-to-declare-javascript-functions/#11aregularfunction">A regular function</a> <br>
+1.2 <a href="https://rainsoft.io/6-ways-to-declare-javascript-functions/#12differencefromfunctionexpression">Difference from function expression</a> <br>
+1.3 <a href="https://rainsoft.io/6-ways-to-declare-javascript-functions/#13functiondeclarationinconditionals">Function declaration in conditionals</a>  </li>
+<li><a href="https://rainsoft.io/6-ways-to-declare-javascript-functions/#2functionexpression">Function expression</a> <br>
+2.1 <a href="https://rainsoft.io/6-ways-to-declare-javascript-functions/#21namedfunctionexpression">Named function expression</a> <br>
+2.2 <a href="https://rainsoft.io/6-ways-to-declare-javascript-functions/#22favornamedfunctionexpression">Favor named function expression</a></li>
+<li><a href="https://rainsoft.io/6-ways-to-declare-javascript-functions/#3shorthandmethoddefinition">Shorthand method definition</a> <br>
+3.1 <a href="https://rainsoft.io/6-ways-to-declare-javascript-functions/#31computedpropertynamesandmethods">Computed property names and methods</a></li>
+<li><a href="https://rainsoft.io/6-ways-to-declare-javascript-functions/#4arrowfunction">Arrow function</a> <br>
+4.1 <a href="https://rainsoft.io/6-ways-to-declare-javascript-functions/#41contexttransparency">Context transparency</a> <br>
+4.2 <a href="https://rainsoft.io/6-ways-to-declare-javascript-functions/#42shortcallbacks">Short callbacks</a>  </li>
+<li><a href="https://rainsoft.io/6-ways-to-declare-javascript-functions/#5generatorfunction">Generator function</a>  </li>
+<li><a href="https://rainsoft.io/6-ways-to-declare-javascript-functions/#6onemorethingnewfunction">One more thing: <code>new Function</code></a>  </li>
+<li><a href="https://rainsoft.io/6-ways-to-declare-javascript-functions/#7intheendwhichwayisbetter">In the end, which way is better?</a>  </li>
+</ol>
+
+<h3 id="1functiondeclaration">1. Function declaration</h3>
+
+<p><strong>A function declaration</strong> is made of <code>function</code> keyword, followed by an obligatory function name, a list of parameters in a pair of parenthesis <code>(para1, ..., paramN)</code> and a pair of curly braces <code>{...}</code> that delimits the body code.  </p>
+
+<p>A function declaration looks this way:</p>
+
+<div class="try-it-container">  
+  <a target="_blank" href="http://jsbin.com/livenu/5/edit?js,console">Try in JS Bin</a>
+  <div class="clear"></div>
+</div>  
+
+<pre class=" language-javascript"><code class=" language-javascript language-javascript"><span class="token comment" spellcheck="true">// function declaration</span>
+<span class="token keyword">function</span> <span class="token function">isEven</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+  <span class="token keyword">return</span> num <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token function">isEven</span><span class="token punctuation">(</span><span class="token number">24</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// =&gt; true  </span>
+<span class="token function">isEven</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// =&gt; false  </span>
+</code></pre>
+
+<p><code>function isEven(num) {...}</code> is a function declaration that defines <code>isEven</code> function, which determines if a number is even.  </p>
+
+<p>The function declaration <strong>creates a variable</strong> in the current scope with the identifier equal to function name. This variable holds the function object. </p>
+
+<p>The function variable is <strong>hoisted</strong> up to the top of the current scope, which means that the function can be invoked before the declaration (see <a href="http://rainsoft.io/javascript-hoisting-in-details/#hoistingandfunctiondeclaration">this chapter</a> for more details).  </p>
+
+<p>The created function is <strong>named</strong>, which means that <code>name</code> property of the function object holds its name. It is useful when viewing the call stack: in debugging or error messages reading.</p>
+
+<p>Let's see these properties in an example:</p>
+
+<div class="try-it-container">  
+  <a target="_blank" href="http://jsbin.com/niyefi/3/edit?js,console">Try in JS Bin</a>
+  <div class="clear"></div>
+</div>  
+
+<pre class=" language-javascript"><code class=" language-javascript language-javascript"><span class="token comment" spellcheck="true">// Hoisted variable</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">hello</span><span class="token punctuation">(</span><span class="token string">'Aliens'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// =&gt; 'Hello Aliens!'  </span>
+<span class="token comment" spellcheck="true">// Named function</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>hello<span class="token punctuation">.</span>name<span class="token punctuation">)</span>       <span class="token comment" spellcheck="true">// =&gt; 'hello'  </span>
+<span class="token comment" spellcheck="true">// Variable holds the function object</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> hello<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">// =&gt; 'function'  </span>
+<span class="token keyword">function</span> <span class="token function">hello</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+  <span class="token keyword">return</span> <span class="token template-string"><span class="token string">`Hello </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">!`</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+
+<p>The function declaration <code>function hello(name) {...}</code> create a variable <code>hello</code> that is hoisted to the top of the current scope. <code>hello</code> variable holds the function object and <code>hello.name</code> contains the function name: <code>'hello'</code>.</p>
+
+<h4 id="11aregularfunction">1.1 A regular function</h4>
+
+<p>The function declaration matches for cases when a regular function should be created. Regular means that you declare the function once and later invoke it in many different places. This is the basic scenario:</p>
+
+<div class="try-it-container">  
+  <a target="_blank" href="http://jsbin.com/xitowa/3/edit?js,console">Try in JS Bin</a>
+  <div class="clear"></div>
+</div>  
+
+<pre class=" language-javascript"><code class=" language-javascript language-javascript"><span class="token keyword">function</span> <span class="token function">sum</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+  <span class="token keyword">return</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token function">sum</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">)</span><span class="token punctuation">;</span>           <span class="token comment" spellcheck="true">// =&gt; 11  </span>
+<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span>sum<span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// =&gt; 10</span>
+</code></pre>
+
+<p>Because the function declaration creates a variable in the current scope, alongside with regular function call, it is useful for recursion or detaching event listeners. Contrary to function expressions or arrow functions that do not create binding with the function variable by its name. <br>
+For example to calculate recursively the factorial:</p>
+
+<div class="try-it-container">  
+  <a target="_blank" href="http://jsbin.com/batuce/3/edit?js,console">Try in JS Bin</a>
+  <div class="clear"></div>
+</div>  
+
+<pre class=" language-javascript"><code class=" language-javascript language-javascript"><span class="token keyword">function</span> <span class="token function">factorial</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>n <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> n <span class="token operator">*</span> <span class="token function">factorial</span><span class="token punctuation">(</span>n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token function">factorial</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// =&gt; 24  </span>
+</code></pre>
+
+<p>Inside <code>factorial()</code> a recursive call is being made using the variable that holds the function: <code>factorial(n - 1)</code>. <br>
+Of course is possible to use a function expression and assign it to a regular variable, e.g. <code>var factorial = function(n) {...}</code>. But the function declaration <code>function factorial(n)</code> looks more compact (no need for <code>var</code> and <code>=</code>).</p>
+
+<p>An important property of the function declaration is its hoisting mechanism. It allows to use the function before declaration in the same scope. <br>
+Hoisting is useful in many cases. For instance when first you like to see how the function is called in the head of a script, without reading the details about function implementation. The function implementation can be situated below in the file and you may not even scroll there. <br>
+You can read more details about function declaration hoisting <a href="http://rainsoft.io/javascript-hoisting-in-details/#hoistingandfunctiondeclaration">here</a>.</p>
+
+<h4 id="12differencefromfunctionexpression">1.2 Difference from function expression</h4>
+
+<p>It is easy to confuse the <a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Statements/function">function declaration</a> and <a href="https://developer.mozilla.org/en/docs/web/JavaScript/Reference/Operators/function">function expression</a>. They look very similar, but produce functions with different properties.  </p>
+
+<p>An easy to remember rule: the <em>function declaration</em> in a statement always <strong>starts</strong> with the keyword <code>function</code>. Otherwise it's a <em>function expression</em> (see <a href="https://rainsoft.io/6-ways-to-declare-javascript-functions/#2functionexpression">2.</a>).  </p>
+
+<p>The following sample is a function declaration where the statement <strong>starts</strong> with <code>function</code> keyword:</p>
+
+<div class="try-it-container">  
+  <a target="_blank" href="http://jsbin.com/dapezu/3/edit?js,console">Try in JS Bin</a>
+  <div class="clear"></div>
+</div>  
+
+<pre class=" language-javascript"><code class=" language-javascript language-javascript"><span class="token comment" spellcheck="true">// Function declaration: starts with "function"</span>
+<span class="token keyword">function</span> <span class="token function">isNil</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+  <span class="token keyword">return</span> value <span class="token operator">==</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+
+<p>In case of function expressions the JavaScript statement <strong>does not start</strong> with <code>function</code> keyword (it is present somewhere in the middle of the statement code): </p>
+
+<div class="try-it-container">  
+  <a target="_blank" href="http://jsbin.com/vutema/3/edit?js,console">Try in JS Bin</a>
+  <div class="clear"></div>
+</div>  
+
+<pre class=" language-javascript"><code class=" language-javascript language-javascript"><span class="token comment" spellcheck="true">// Function expression: starts with "var"</span>
+<span class="token keyword">var</span> isTruthy <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+  <span class="token keyword">return</span> <span class="token operator">!</span><span class="token operator">!</span>value<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// Function expression: an argument for .filter()</span>
+<span class="token keyword">var</span> numbers <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">filter</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+  <span class="token keyword">return</span> <span class="token keyword">typeof</span> item <span class="token operator">===</span> <span class="token string">'number'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// Function expression (IIFE): starts with "("</span>
+<span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token function">messageFunction</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> message <span class="token operator">+</span> <span class="token string">' World!'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token string">'Hello'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+
+<h4 id="13functiondeclarationinconditionals">1.3 Function declaration in conditionals</h4>
+
+<p>Some JavaScript environments can throw a reference error when invoking a function whose declaration appears within blocks <code>{...}</code> of <code>if</code>, <code>for</code> or <code>while</code> statements. <br>
+Let's enable the strict mode and see what happens when a function is declared in a conditional:</p>
+
+<div class="try-it-container">  
+  <a target="_blank" href="http://jsbin.com/palaro/3/edit?js,console">Try in JS Bin</a>
+  <div class="clear"></div>
+</div>  
+
+<pre class=" language-javascript"><code class=" language-javascript language-javascript"><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token string">'use strict'</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">function</span> <span class="token function">ok</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token string">'true ok'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token keyword">function</span> <span class="token function">ok</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token string">'false ok'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> ok <span class="token operator">===</span> <span class="token string">'undefined'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// =&gt; true</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">ok</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// Throws "ReferenceError: ok is not defined"</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+
+<p>When calling <code>ok()</code>, JavaScript throws <code>ReferenceError: ok is not defined</code>, because the function declaration is inside a conditional block. <br>
+Notice that this scenario works well in non-strict mode, which make it even more confusing.</p>
+
+<p>As a general rule for these situations, when a function should be create based on some conditions - use a function expression. Let's see how it is possible:</p>
+
+<div class="try-it-container">  
+  <a target="_blank" href="http://jsbin.com/faxezo/4/edit?js,console">Try in JS Bin</a>
+  <div class="clear"></div>
+</div>  
+
+<pre class=" language-javascript"><code class=" language-javascript language-javascript"><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token string">'use strict'</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> ok<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    ok <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token string">'true ok'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    ok <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token string">'false ok'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> ok <span class="token operator">===</span> <span class="token string">'function'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// =&gt; true</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">ok</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// =&gt; 'true ok'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+
+<p>Because the function is a regular object, it is fine to assign it to a variable depending on a condition. Invoking <code>ok()</code> works fine and does not throw any errors.</p>
+
+<h3 id="2functionexpression">2. Function expression</h3>
+
+<p><strong>A function expression</strong> is determined by a <code>function</code> keyword, followed by an optional function name, a list of parameters in a pair of parenthesis <code>(para1, ..., paramN)</code> and a pair of curly braces <code>{ ... }</code> that delimits the body code. <br>
+Some samples of the function expression usage:</p>
+
+<div class="try-it-container">  
+  <a target="_blank" href="http://jsbin.com/xufexoc/1/edit?js,console">Try in JS Bin</a>
+  <div class="clear"></div>
+</div>  
+
+<pre class=" language-javascript"><code class=" language-javascript language-javascript"><span class="token keyword">var</span> count <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// Function expression  </span>
+  <span class="token keyword">return</span> array<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> methods <span class="token operator">=</span> <span class="token punctuation">{</span>  
+  numbers<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  sum<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// Function expression</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>numbers<span class="token punctuation">.</span><span class="token function">reduce</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>acc<span class="token punctuation">,</span> num<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// func. expression</span>
+      <span class="token keyword">return</span> acc <span class="token operator">+</span> num<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// =&gt; 3  </span>
+methods<span class="token punctuation">.</span><span class="token function">sum</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">// =&gt; 14  </span>
+</code></pre>
+
+<p>The function expression creates a function object that can be used in different situations: </p>
+
+<ul>
+<li>Assigned to a variable as an object <code>count = function(...) {...}</code></li>
+<li>Create a method on an object <code>sum: function() {...}</code></li>
+<li>Use the function as a callback <code>.reduce(function(...) {...})</code></li>
+</ul>
+
+<p>The function expression is the working horse in JavaScript. Most of the time developer deals with this type of function declaration alongside the arrow function (if you prefer short syntax and lexical context).  </p>
+
+<h4 id="21namedfunctionexpression">2.1 Named function expression</h4>
+
+<p>A function is anonymous when it does not have a name (<code>name</code> property is an empty string <code>''</code>):</p>
+
+<div class="try-it-container">  
+  <a target="_blank" href="http://jsbin.com/zovomu/3/edit?js,console">Try in JS Bin</a>
+  <div class="clear"></div>
+</div>  
+
+<pre class=" language-javascript"><code class=" language-javascript language-javascript"><span class="token keyword">var</span> getType <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>variable<span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+  <span class="token keyword">return</span> <span class="token keyword">typeof</span> variable<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+getType<span class="token punctuation">.</span>name <span class="token comment" spellcheck="true">// =&gt; ''  </span>
+</code></pre>
+
+<p><code>getType</code> is an anonymous function and <code>getType.name</code> is <code>''</code>.</p>
+
+<p>When the expression has the name specified, this is a <strong>named function expression</strong>. It has some additional properties in comparison with simple function expression:</p>
+
+<ul>
+<li>A named function is created, i.e. <code>name</code> property holds the function name</li>
+<li>Inside the function body a variable with the same name holds the function object</li>
+</ul>
+
+<p>Let's use the above example, but specify a name in the function expression:</p>
+
+<div class="try-it-container">  
+  <a target="_blank" href="http://jsbin.com/saciti/3/edit?js,console">Try in JS Bin</a>
+  <div class="clear"></div>
+</div>  
+
+<pre class=" language-javascript"><code class=" language-javascript language-javascript"><span class="token keyword">var</span> getType <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token function">funName</span><span class="token punctuation">(</span>variable<span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> funName <span class="token operator">===</span> <span class="token string">'function'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// =&gt; true</span>
+  <span class="token keyword">return</span> <span class="token keyword">typeof</span> variable<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token function">getType</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>                    <span class="token comment" spellcheck="true">// =&gt; 'number'  </span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>getType<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>                  <span class="token comment" spellcheck="true">// =&gt; 'funName'  </span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> funName <span class="token operator">===</span> <span class="token string">'function'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// =&gt; false  </span>
+</code></pre>
+
+<p><code>function funName(variable) {...}</code> is a named function expression. The variable <code>funName</code> is accessible within function scope, but not outside. The property <code>name</code> of the function object holds the name: <code>funName</code>.</p>
+
+<h4 id="22favornamedfunctionexpression">2.2 Favor named function expression</h4>
+
+<p>When a variable assignment is used with a function expression <code>var fun = function() {}</code>, many engines can infer the function name from this variable. Often callbacks are passed as anonymous function expressions, without storing into variables: so the engine cannot determine its name. </p>
+
+<p>In many situations <a href="https://toddmotto.com/avoiding-anonymous-javascript-functions/">it seems reasonable</a> to use named functions and avoid anonymous ones. This brings a series of benefits:</p>
+
+<ul>
+<li>The error messages and call stacks show more detailed information when use the function names</li>
+<li>More comfortable debugging by reducing the number of <em>anonoymous</em> stack names </li>
+<li>The function name helps to understand quickly what it does</li>
+<li>It is possible to access the function by name inside its scope for recursive calls or detaching event listeners</li>
+</ul>
+
+<h3 id="3shorthandmethoddefinition">3. Shorthand method definition</h3>
+
+<p><strong>Shorthand method definition</strong> can be used in a method declaration on object literals and ES6 classes. You can define them using a function name, followed by a list of parameters in a pair of parenthesis <code>(para1, ..., paramN)</code> and a pair of curly braces <code>{ ... }</code> that delimits the body statements.</p>
+
+<p>The following example uses shorthand method definition in an object literal:</p>
+
+<div class="try-it-container">  
+  <a target="_blank" href="http://jsbin.com/modeso/3/edit?js,console">Try in JS Bin</a>
+  <div class="clear"></div>
+</div>  
+
+<pre class=" language-javascript"><code class=" language-javascript language-javascript"><span class="token keyword">var</span> collection <span class="token operator">=</span> <span class="token punctuation">{</span>  
+  items<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token function">add</span><span class="token punctuation">(</span><span class="token operator">...</span>items<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>items<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token operator">...</span>items<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token keyword">get</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>items<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+collection<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span><span class="token string">'C'</span><span class="token punctuation">,</span> <span class="token string">'Java'</span><span class="token punctuation">,</span> <span class="token string">'PHP'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+collection<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// =&gt; 'Java'  </span>
+</code></pre>
+
+<p><code>add()</code> and <code>get()</code> methods in <code>collection</code> object are defined using short method definition. These methods are called as usual: <code>collection.add(...)</code> and <code>collection.get(...)</code>.  </p>
+
+<p>The short approach of method definition has several benefits over traditional property definition with a name, colon <code>:</code> and a function expression <code>add: function(...) {...}</code>:</p>
+
+<ul>
+<li>A shorter syntax is easier to read and write</li>
+<li>Shorthand method definition creates named functions, contrary to a function expression. It is useful for debugging.</li>
+</ul>
+
+<p>Notice that <code>class</code> syntax requires method declarations in a short form:</p>
+
+<div class="try-it-container">  
+  <a target="_blank" href="http://jsbin.com/muqamu/3/edit?js,console">Try in JS Bin</a>
+  <div class="clear"></div>
+</div>  
+
+<pre class=" language-javascript"><code class=" language-javascript language-javascript"><span class="token keyword">class</span> <span class="token class-name">Star</span> <span class="token punctuation">{</span>  
+  <span class="token function">constructor</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">getMessage</span><span class="token punctuation">(</span>message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">+</span> message<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> sun <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Star</span><span class="token punctuation">(</span><span class="token string">'Sun'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+sun<span class="token punctuation">.</span><span class="token function">getMessage</span><span class="token punctuation">(</span><span class="token string">' is shining'</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// =&gt; 'Sun is shining'  </span>
+</code></pre>
+
+<h4 id="31computedpropertynamesandmethods">3.1 Computed property names and methods</h4>
+
+<p>ECMAScript 6 adds a nice feature: computed property names in object literals and classes. <br>
+The computed properties use a slight different syntax <code>[methodName]() {...}</code>, so the method definition looks this way:</p>
+
+<div class="try-it-container">  
+  <a target="_blank" href="http://jsbin.com/luhedi/3/edit?js,console">Try in JS Bin</a>
+  <div class="clear"></div>
+</div>  
+
+<pre class=" language-javascript"><code class=" language-javascript language-javascript"><span class="token keyword">var</span> addMethod <span class="token operator">=</span> <span class="token string">'add'</span><span class="token punctuation">,</span>  
+  getMethod <span class="token operator">=</span> <span class="token string">'get'</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> collection <span class="token operator">=</span> <span class="token punctuation">{</span>  
+  items<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">[</span>addMethod<span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token operator">...</span>items<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>items<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token operator">...</span>items<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">[</span>getMethod<span class="token punctuation">]</span><span class="token punctuation">(</span>index<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token keyword">this</span><span class="token punctuation">.</span>items<span class="token punctuation">[</span>index<span class="token punctuation">]</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+collection<span class="token punctuation">[</span>addMethod<span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token string">'C'</span><span class="token punctuation">,</span> <span class="token string">'Java'</span><span class="token punctuation">,</span> <span class="token string">'PHP'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+collection<span class="token punctuation">[</span>getMethod<span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// =&gt; 'Java'  </span>
+</code></pre>
+
+<p><code>[addMethod](...) {...}</code> and  <code>[getMethod](...) {...}</code> are shorthand method declarations with computed property names.</p>
+
+<h3 id="4arrowfunction">4. Arrow function</h3>
+
+<p><strong>An arrow function</strong> is defined using a pair of parenthesis that contains the list of parameters <code>(param1, param2, ..., paramN)</code>, followed by a fat arrow <code>=&gt;</code> and a pair of curly braces <code>{...}</code> that delimits the body statements. <br>
+When the arrow function has only one parameter, the pair of parenthesis can be omitted. When it contains a single statement, the curly braces can be omitted too.</p>
+
+<p>The following example shows the arrow function basic usage:</p>
+
+<div class="try-it-container">  
+  <a target="_blank" href="http://jsbin.com/yabipiv/3/edit?js,console">Try in JS Bin</a>
+  <div class="clear"></div>
+</div>  
+
+<pre class=" language-javascript"><code class=" language-javascript language-javascript"><span class="token keyword">var</span> absValue <span class="token operator">=</span> <span class="token punctuation">(</span>number<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>  
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>number <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token operator">-</span>number<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> number<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token function">absValue</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// =&gt; 10  </span>
+<span class="token function">absValue</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">// =&gt; 5  </span>
+</code></pre>
+
+<p><code>absValue</code> is an arrow function that calculates the absolute value of a number.</p>
+
+<p>The function declared using a fat arrow has the following properties:</p>
+
+<ul>
+<li>The arrow function does not create its own execution context, but takes it lexically (contrary to function expression or function declaration, which create  own <code>this</code> depending on invocation)</li>
+<li>The arrow function is anonymous: <code>name</code> is an empty string (contrary to function declaration which have a name)</li>
+<li><code>arguments</code> object is not available in the arrow function (contrary to other declaration types that provide <code>arguments</code> object)</li>
+</ul>
+
+<h4 id="41contexttransparency">4.1 Context transparency</h4>
+
+<p><code>this</code> keyword is one of the most confusing aspects of JavaScript (check <a href="http://rainsoft.io/gentle-explanation-of-this-in-javascript/">this article</a> for a detailed explanation on <code>this</code>). <br>
+Because functions create their own execution context, often it is hard to catch the flying around <code>this</code>.</p>
+
+<p>ECMAScript 6 improves <code>this</code> usage by introducing the arrow function, which takes the context lexically. This is nice, because from now on is not necessary to use <code>.bind(this)</code> or store the context <code>var self = this</code> when a function needs the enclosing context.</p>
+
+<p>Let's see how <code>this</code> is inherited from the outer function:</p>
+
+<div class="try-it-container">  
+  <a target="_blank" href="http://jsbin.com/pupenu/4/edit?js,console">Try in JS Bin</a>
+  <div class="clear"></div>
+</div>  
+
+<pre class=" language-javascript"><code class=" language-javascript language-javascript"><span class="token keyword">class</span> <span class="token class-name">Numbers</span> <span class="token punctuation">{</span>  
+  <span class="token function">constructor</span><span class="token punctuation">(</span>array<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>array <span class="token operator">=</span> array<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">addNumber</span><span class="token punctuation">(</span>number<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>number <span class="token operator">!==</span> undefined<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+       <span class="token keyword">this</span><span class="token punctuation">.</span>array<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>number<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> 
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>number<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span> 
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span> <span class="token operator">===</span> numbersObject<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// =&gt; true</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>array<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>number<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> numbersObject <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Numbers</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+numbersObject<span class="token punctuation">.</span><span class="token function">addNumber</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+<span class="token keyword">var</span> addMethod <span class="token operator">=</span> numbersObject<span class="token punctuation">.</span><span class="token function">addNumber</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+<span class="token function">addMethod</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>numbersObject<span class="token punctuation">.</span>array<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// =&gt; [1, 5]  </span>
+</code></pre>
+
+<p><code>Numbers</code> class holds an array of numbers and provides a method <code>addNumber()</code> to insert new numbers. <br>
+When <code>addNumber()</code> is called without arguments, a closure is returned that allows to insert numbers. This closure is an arrow function which has <code>this</code> as <code>numbersObject</code> instance, because the context is taken lexically from <code>addNumbers()</code> method.  </p>
+
+<p>Without the arrow function is necessary to manually fix the context. It means adding fixes by using <code>.bind()</code> method:</p>
+
+<div class="try-it-container">  
+  <a target="_blank" href="http://jsbin.com/karawoy/3/edit?js,console">Try in JS Bin</a>
+  <div class="clear"></div>
+</div>  
+
+<pre class=" language-javascript"><code class=" language-javascript language-javascript"><span class="token comment" spellcheck="true">//...</span>
+    <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span>number<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span> <span class="token operator">===</span> numbersObject<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// =&gt; true</span>
+      <span class="token keyword">this</span><span class="token punctuation">.</span>array<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>number<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//...</span>
+</code></pre>
+
+<p>or store the context into a separated variable <code>var self = this</code>:</p>
+
+<div class="try-it-container">  
+  <a target="_blank" href="http://jsbin.com/nunurac/3/edit?js,console">Try in JS Bin</a>
+  <div class="clear"></div>
+</div>  
+
+<pre class=" language-javascript"><code class=" language-javascript language-javascript"><span class="token comment" spellcheck="true">//...</span>
+    <span class="token keyword">var</span> self <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span>number<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>self <span class="token operator">===</span> numbersObject<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// =&gt; true</span>
+      self<span class="token punctuation">.</span>array<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>number<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">//...</span>
+</code></pre>
+
+<p>The context transparency property can be used whenever you want to keep <code>this</code> as is, taken from the enclosing context.</p>
+
+<h4 id="42shortcallbacks">4.2 Short callbacks</h4>
+
+<p>When creating an arrow function, the parenthesis pairs and curly braces are optional for a single parameter and single body statement. This helps creating very short callback functions.</p>
+
+<p>Let's make a function that finds if an array has <code>0</code> elements:</p>
+
+<div class="try-it-container">  
+  <a target="_blank" href="http://jsbin.com/povedov/2/edit?js,console">Try in JS Bin</a>
+  <div class="clear"></div>
+</div>  
+
+<pre class=" language-javascript"><code class=" javascript-language language-javascript"><span class="token keyword">var</span> numbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  
+numbers<span class="token punctuation">.</span><span class="token function">some</span><span class="token punctuation">(</span>item <span class="token operator">=</span><span class="token operator">&gt;</span> item <span class="token operator">===</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// =&gt; true  </span>
+</code></pre>
+
+<p><code>item =&gt; item === 0</code> is an arrow function that looks straightforward.</p>
+
+<p>Sometimes nested short arrow functions are difficult to read. So the most convinient way to use the short form is a single callback function (without nested ones). <br>
+If necessary, in the nested functions the optional curly braces can be restored to increase the readability.  </p>
+
+<h3 id="5generatorfunction">5. Generator function</h3>
+
+<p>The generator function in JavaScript returns a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator">Generator object</a>. Its syntax is similar to function expression, function declaration or method declaration, just that it requires a star character <code>*</code>.</p>
+
+<p>The generator function can be declared in the following forms:</p>
+
+<p>a. Function declaration form <code>function* &lt;name&gt;()</code>:</p>
+
+<div class="try-it-container">  
+  <a target="_blank" href="http://jsbin.com/romevu/2/edit?js,console">Try in JS Bin</a>
+  <div class="clear"></div>
+</div>  
+
+<pre class=" language-javascript"><code class=" language-javascript language-javascript"><span class="token keyword">function</span><span class="token operator">*</span> <span class="token function">indexGenerator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>  
+  <span class="token keyword">var</span> index <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">yield</span> index<span class="token operator">++</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> g <span class="token operator">=</span> <span class="token function">indexGenerator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>g<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// =&gt; 0  </span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>g<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// =&gt; 1  </span>
+</code></pre>
+
+<p>b. Function expression form <code>function* ()</code>:</p>
+
+<div class="try-it-container">  
+  <a target="_blank" href="http://jsbin.com/qegice/2/edit?js,console">Try in JS Bin</a>
+  <div class="clear"></div>
+</div>  
+
+<pre class=" language-javascript"><code class=" language-javascript language-javascript"><span class="token keyword">var</span> indexGenerator <span class="token operator">=</span> <span class="token keyword">function</span><span class="token operator">*</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+  <span class="token keyword">var</span> index <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+  <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">yield</span> index<span class="token operator">++</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> g <span class="token operator">=</span> <span class="token function">indexGenerator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>g<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// =&gt; 0  </span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>g<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// =&gt; 1  </span>
+</code></pre>
+
+<p>c. Shorthand method definition form <code>*&lt;name&gt;()</code>:</p>
+
+<div class="try-it-container">  
+  <a target="_blank" href="http://jsbin.com/qeqeqa/2/edit?js,console">Try in JS Bin</a>
+  <div class="clear"></div>
+</div>  
+
+<pre class=" language-javascript"><code class=" language-javascript language-javascript"><span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>  
+  <span class="token operator">*</span><span class="token function">indexGenerator</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> index <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">yield</span> index<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> g <span class="token operator">=</span> obj<span class="token punctuation">.</span><span class="token function">indexGenerator</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>g<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// =&gt; 0  </span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>g<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// =&gt; 1  </span>
+</code></pre>
+
+<p>In all 3 cases the generator function returns the generator object <code>g</code>. Later <code>g</code> is used to generated series of incremented numbers.</p>
+
+<h3 id="6onemorethingnewfunction">6. One more thing: <code>new Function</code></h3>
+
+<p>In JavaScript functions are first class objects - a function is a regular object of type <code>function</code>. <br>
+The ways of declaration described above create the same function object type. Let's see an example:</p>
+
+<div class="try-it-container">  
+  <a target="_blank" href="http://jsbin.com/wapuji/2/edit?js,console">Try in JS Bin</a>
+  <div class="clear"></div>
+</div>  
+
+<pre class=" language-javascript"><code class=" language-javascript language-javascript"><span class="token keyword">function</span> <span class="token function">sum1</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+  <span class="token keyword">return</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> sum2 <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+  <span class="token keyword">return</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">var</span> sum3 <span class="token operator">=</span> <span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">&gt;</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>  
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> sum1 <span class="token operator">===</span> <span class="token string">'function'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// =&gt; true  </span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> sum2 <span class="token operator">===</span> <span class="token string">'function'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// =&gt; true  </span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> sum3 <span class="token operator">===</span> <span class="token string">'function'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// =&gt; true  </span>
+</code></pre>
+
+<p>The function object type has a constructor: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function"><code>Function</code></a>. <br>
+When <code>Function</code> is invoked as a constructor <code>new Function(arg1, arg2, ..., argN, bodyString)</code>, a new function is created. The arguments <code>arg1, args2, ..., argN</code> passed to constructor become the parameter names for the new function and the last argument <code>bodyString</code> is used as the function body code.  </p>
+
+<p>Let's create a function that sums two numbers: </p>
+
+<div class="try-it-container">  
+  <a target="_blank" href="http://jsbin.com/noteje/2/edit?js,console">Try in JS Bin</a>
+  <div class="clear"></div>
+</div>  
+
+<pre class=" language-javascript"><code class=" language-javascript language-javascript"><span class="token keyword">var</span> numberA <span class="token operator">=</span> <span class="token string">'numberA'</span><span class="token punctuation">,</span> numberB <span class="token operator">=</span> <span class="token string">'numberB'</span><span class="token punctuation">;</span>  
+<span class="token keyword">var</span> sumFunction <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Function</span><span class="token punctuation">(</span>numberA<span class="token punctuation">,</span> numberB<span class="token punctuation">,</span>  
+   <span class="token string">'return numberA + numberB'</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">sumFunction</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// =&gt; 25  </span>
+</code></pre>
+
+<p><code>sumFunction</code> created with <code>Function</code> constructor invocation has parameters <code>numberA</code> and <code>numberB</code> and the body <code>return numberA + numberB</code>.</p>
+
+<p>The functions created this way don't have access to current scope, thus closures cannot be created. They are always created in the global scope. </p>
+
+<p>One <em>possible</em> application of <code>new Function</code> is a <a href="https://twitter.com/WebReflection/status/269578376833024000">better way</a> to access the  global object in a browser or NodeJS script:</p>
+
+<div class="try-it-container">  
+  <a target="_blank" href="http://jsbin.com/vawife/2/edit?js,console">Try in JS Bin</a>
+  <div class="clear"></div>
+</div>  
+
+<pre class=" language-javascript"><code class=" language-javascript language-javascript"><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+   <span class="token string">'use strict'</span><span class="token punctuation">;</span>
+   <span class="token keyword">var</span> global <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Function</span><span class="token punctuation">(</span><span class="token string">'return this'</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>global <span class="token operator">===</span> window<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// =&gt; true</span>
+   console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span> <span class="token operator">===</span> window<span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">// =&gt; false</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+
+<p>Important to remember about <code>new Function</code> is that <strong>almost never</strong> functions should be declared this way. Because the function body is evaluated on runtime, this approach inherits many <code>eval()</code> usage <a href="http://stackoverflow.com/a/86580/1894471">problems</a>: security risks, harder debugging, no way to apply interpreter optimizations, no code auto-complete.</p>
+
+<h3 id="7intheendwhichwayisbetter">7. In the end, which way is better?</h3>
+
+<p>There is no winner or looser. The decision which declaration type to choose depends on the situation.  </p>
+
+<p>There are some rules however that you may follow for common situations.</p>
+
+<p>If the function should use <code>this</code> from the enclosing function, the arrow function is a good solution. When the callback function has one short statement, the arrow function is a good option too, because it creates short and light code. </p>
+
+<p>For a shorter syntax when declaring methods on object literals, the shorthand method declaration is preferable.  </p>
+
+<p><code>new Function</code> way to declare functions generally should not be used. Mainly because it opens potential security risks, doesn't allow code auto-complete in editors and lose the engine optimizations.</p>
+
+<p>I believe this article is another step to write more readable and less buggy functions. Especially because they are the living cells of any application.</p>
+        </section>
+
+        <section class="post-info">
+
+          <div class="post-share">
+            <a class="twitter" href="https://twitter.com/share?text=Six%20ways%20to%20declare%20JavaScript%20functions&amp;url=https://rainsoft.io/6-ways-to-declare-javascript-functions/&amp;related=panzerdp" onclick="window.open(this.href, &#39;twitter-share&#39;, &#39;width=550,height=300&#39;);return false;">
+              <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
+            </a>
+            <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://rainsoft.io/6-ways-to-declare-javascript-functions/" onclick="window.open(this.href, &#39;facebook-share&#39;,&#39;width=580,height=296&#39;);return false;">
+              <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
+            </a>
+            <a class="googleplus" href="https://plus.google.com/share?url=https://rainsoft.io/6-ways-to-declare-javascript-functions/" onclick="window.open(this.href, &#39;google-plus-share&#39;, &#39;width=490,height=530&#39;);return false;">
+              <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
+            </a>
+            <div class="clear"></div>
+          </div>
+
+          <aside class="post-tags">
+            <a href="https://rainsoft.io/tag/javascript/">javascript</a> <a href="https://rainsoft.io/tag/function/">function</a> <a href="https://rainsoft.io/tag/declaration/">declaration</a> <a href="https://rainsoft.io/tag/arrow-function/">arrow function</a> <a href="https://rainsoft.io/tag/ecmascript-2015/">ecmascript-2015</a>
+          </aside>
+
+          <div class="clear"></div>
+
+            <aside class="post-author">
+                <figure class="post-author-avatar">
+                  <img src="./Six ways to declare JavaScript functions_files/0d57a57d8807ebc70e24b46f6d9e3a36" alt="Dmitri Pavlutin">
+                </figure>
+              <div class="post-author-bio">
+                <h4 class="post-author-name"><a href="https://rainsoft.io/author/dmitri-pavlutin/">Dmitri Pavlutin</a></h4>
+                  <p class="post-author-about">Web developer. JavaScript languages fan. I enjoy coding, blogging, learning, open sourcing and solving problems. <a href="https://rainsoft.io/about-me/" class="about-me">About me</a><br><iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-follow-button twitter-follow-button-rendered" title="Twitter Follow Button" src="./Six ways to declare JavaScript functions_files/follow_button.b3226572cee17eb8b0f0dfc053da78fc.en.html" style="position: static; visibility: visible; width: 210px; height: 20px;" data-screen-name="panzerdp"></iframe></p>
+              </div>
+              <div class="clear"></div>
+            </aside>
+
+        </section>
+
+
+        <aside class="post-nav">
+          <div class="popular-articles">
+            <h3>
+              Popular articles
+            </h3>
+            <ul>
+                  <li>
+                    <a class="common-link" href="https://rainsoft.io/gentle-explanation-of-this-in-javascript/">Gentle explanation of 'this' keyword in JavaScript</a>
+                  </li>
+                  <li>
+                    <a class="common-link" href="https://rainsoft.io/how-three-dots-changed-javascript/">How three dots changed JavaScript</a>
+                  </li>
+                  <li>
+                    <a class="common-link" href="https://rainsoft.io/6-ways-to-declare-javascript-functions/">Six ways to declare JavaScript functions</a>
+                  </li>
+                  <li>
+                    <a class="common-link" href="https://rainsoft.io/when-not-to-use-arrow-functions-in-javascript/">When 'not' to use arrow functions</a>
+                  </li>
+            </ul>
+          </div>
+          <div class="recent-articles">
+            <h3>
+              Recent articles
+            </h3>
+            <ul>
+                  <li>
+                    <a class="common-link" href="https://rainsoft.io/7-tips-to-handle-undefined-in-javascript/">7 tips to handle undefined in JavaScript</a>
+                  </li>
+                  <li>
+                    <a class="common-link" href="https://rainsoft.io/announcing-voca-the-ultimate-javascript-string-library/">Announcing Voca: The ultimate JavaScript string library</a>
+                  </li>
+                  <li>
+                    <a class="common-link" href="https://rainsoft.io/make-your-swift-code-expressive-addition-operator-use-cases/">Make your Swift code expressive: addition operator use cases</a>
+                  </li>
+            </ul>
+          </div>
+          <div class="clear"></div>
+        </aside>
+
+        <section class="subscribe-form">
+          <!-- Begin MailChimp Signup Form -->
+          <div id="mc_embed_signup">
+            <form action="https://rainsoft.us13.list-manage.com/subscribe/post?u=7cedcb1f5ab74eb7c907e768e&amp;id=75f44f92b9" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+              <div id="mc_embed_signup_scroll">
+                <div class="subscribe-title">
+                  <h3>Subscribe to our newsletter!</h3>
+                  Learning is the key to success: level up your skills with latest articles from Rainsoft.
+                </div>
+                <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required="">
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_7cedcb1f5ab74eb7c907e768e_75f44f92b9" tabindex="-1" value=""></div>
+                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+              </div>
+            </form>
+          </div>
+          <!--End mc_embed_signup-->
+        </section>
+        <section class="post-comments" style="display: none;">
+          <a id="show-disqus" class="post-comments-activate">Show Comments</a>
+          <div id="disqus_thread"><iframe id="dsq-app1" name="dsq-app1" allowtransparency="true" frameborder="0" scrolling="no" tabindex="0" title="Disqus" width="100%" src="./Six ways to declare JavaScript functions_files/saved_resource.html" style="width: 1px !important; min-width: 100% !important; border: none !important; overflow: hidden !important; height: 2594px !important;" horizontalscrolling="no" verticalscrolling="no"></iframe></div>
+
+        </section>
+
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+          var disqus_shortname = 'rainsoft'; // required: replace example with your forum shortname
+          var disqus_identifier = '25';
+
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+        </script>
+        <noscript>
+          Please enable JavaScript to view the &lt;a href="http://disqus.com/?ref_noscript"&gt;comments powered by
+          Disqus.&lt;/a&gt;
+        </noscript>
+        
+      </div>
+    </article>
+  </main>
+
+
+		<div id="body-class" style="display: none;" class="post-template tag-javascript tag-function tag-declaration tag-arrow-function tag-ecmascript-2015"></div>
+
+		<footer id="footer">
+			<div class="inner">
+				<section class="credits">
+					<span class="credits-theme">
+						<a class="fa fa-twitter " target="_blank" href="https://twitter.com/panzerdp"></a>
+            <a class="fa fa-stack-overflow" target="_blank" href="http://stackoverflow.com/users/1894471/dmitrii"></a>
+            <a class="fa fa-github" target="_blank" href="https://github.com/panzerdp"></a>
+					</span>
+					<span class="credits-software">Hosted on <a target="_blank" href="https://www.webfaction.com/?aid=61765">Webfaction</a></span>
+				</section>
+			</div>
+		</footer>
+	</section>
+
+	<script type="text/javascript" src="./Six ways to declare JavaScript functions_files/script.js.download"></script>
+
+	
+
+
+
+<iframe style="display: none;" src="./Six ways to declare JavaScript functions_files/saved_resource(2).html"></iframe><iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe" src="./Six ways to declare JavaScript functions_files/saved_resource(3).html"></iframe></body></html>

@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://www.npmjs.com/package/abstract-data-types -->
+<html lang="en" prefix="og: http://ogp.me/ns#" class=" js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">.autocomplete-container {  overflow: visible;}.autocomplete-suggestions {  border: 1px solid #999;  background: #FFF;  overflow-x: hidden;  overflow-y: auto;  cursor: default;}.autocomplete-suggestion {  padding: 2px 5px;  white-space: nowrap;  overflow: hidden;}.autocomplete-selected {  background: #F0F0F0;}.autocomplete-container strong {  font-weight: bold;}#powered-by-constructor-io {  font-size: 0.8em;  text-align:right;  background-color:rgb(255,255,192);  font-family:sans-serif;  padding: 4px 10px;  position: absolute;  border: 1px solid #999;}#constructorio-backing-node {  background-color:rgb(255,255,255);  padding: 4px 10px;  position: absolute;  border: 1px solid #FFF;}.autocomplete-suggestion-image {  float:left;  padding-right: 10px;}#autocomplete-direct-results:before {  content:'Products'}#autocomplete-search-container:before {  content:'Search Suggestions'}.autocomplete-suggestion-description {  font-size: 0.8em;  display: block;  margin-left: 10px;  line-height: 1.0em;}</style>
+  
+  
+  <title>abstract-data-types</title>
+
+    <meta name="description" content="This module aims to provide a full suite of abstract data types. At present it provides the abstract data type, Queue, Linked List, Stack, Binary Tree an Binary Search Tree.">
+    <meta property="og:description" content="This module aims to provide a full suite of abstract data types. At present it provides the abstract data type, Queue, Linked List, Stack, Binary Tree an Binary Search Tree.">
+    <meta property="og:title" content="abstract-data-types">
+    <meta property="og:url" content="https://www.npmjs.com/package/abstract-data-types">
+    <meta property="og:site_name" content="npm">
+    <meta name="keywords" content="abstract,data,type,queue,adt,abstract data type,abstract-data-type,link list,linked,list,stack,binary tree,binary-tree,binary,tree,binary search tree,binary-search-tree,search tree,search">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="https://www.npmjs.com/package/abstract-data-types">
+    <meta name="twitter:title" content="npm: abstract-data-types">
+    <meta name="twitter:description" content="This module aims to provide a full suite of abstract data types. At present it provides the abstract data type, Queue, Linked List, Stack, Binary Tree an Binary Search Tree.">
+  
+  
+  <meta http-equiv="cleartype" content="on">
+  
+  <meta name="apple-mobile-web-app-capable" content="no">
+  
+  
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,initial-scale=1,user-scalable=yes">
+  
+  <meta name="x-npm:ga:id" content="UA-47041310-1">
+  <meta name="x-npm:ga:dimensions" content="{&quot;aboveChrome&quot;:&quot;dimension1&quot;,&quot;belowHeader&quot;:&quot;dimension3&quot;,&quot;packagePage&quot;:&quot;dimension2&quot;}">
+  
+  <link rel="canonical" href="https://www.npmjs.com/package/abstract-data-types">
+  <link rel="search" type="application/opensearchdescription+xml" href="https://www.npmjs.com/opensearch.xml" title="npm">
+
+    <link rel="stylesheet" media="all" href="./abstract-data-types_files/index.css">
+
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <![endif]-->
+
+  <link rel="stylesheet" href="./abstract-data-types_files/css">
+  
+    <script type="text/javascript" async="" src="./abstract-data-types_files/ec.js.download"></script><script async="" src="./abstract-data-types_files/analytics.js.download"></script><script src="./abstract-data-types_files/index.min.js.download"></script>
+    <style>
+      .marketing {
+  margin: 0px;
+  margin-left: -10px;
+  margin-bottom: 40px;
+  padding: 0px 0px;
+  font-size: 15px;
+  font-style: normal;
+  fond-variant: normal;
+  fort-weight: normal;
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.4);
+  text-decoration: none;
+  letter-spacing: -0.03em;
+  line-height: 22.5px;
+  }
+  
+  .marketing a {
+  font-weight: 400;
+  text-decoration: none;
+  color: #cb3837;
+  }
+  
+  .marketing h3 {
+  display: block;
+  margin: 0;
+  padding: 20px 0 10px 0;
+  font-size: 20px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+  line-height: 22px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .marketing h3 a {
+  color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .marketing h3 a:hover {
+  color: #cb3837;
+  }
+  
+  .marketing p {
+  line-height: 22.5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  }
+  
+  .marketing p a {
+  white-space: nowrap;
+  }
+  
+  #marketing-texthed {
+  margin-left: 10px;
+  }
+    </style>
+  <link rel="apple-touch-icon" sizes="57x57" href="https://www.npmjs.com/static/images/touch-icons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://www.npmjs.com/static/images/touch-icons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://www.npmjs.com/static/images/touch-icons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://www.npmjs.com/static/images/touch-icons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://www.npmjs.com/static/images/touch-icons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://www.npmjs.com/static/images/touch-icons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://www.npmjs.com/static/images/touch-icons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://www.npmjs.com/static/images/touch-icons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://www.npmjs.com/static/images/touch-icons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="https://www.npmjs.com/static/images/touch-icons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="https://www.npmjs.com/static/images/touch-icons/favicon-230x230.png" sizes="230x230">
+  <link rel="icon" type="image/png" href="https://www.npmjs.com/static/images/touch-icons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="https://www.npmjs.com/static/images/touch-icons/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="https://www.npmjs.com/static/images/touch-icons/coast-228x228.png" sizes="228x228">
+  <link rel="icon" type="image/png" href="https://www.npmjs.com/static/images/touch-icons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="https://www.npmjs.com/static/images/touch-icons/manifest.json">
+  <link rel="yandex-tableau-widget" href="https://www.npmjs.com/static/images/touch-icons/yandex-browser-manifest.json">
+  <meta property="og:image" content="https://www.npmjs.com/static/images/touch-icons/open-graph.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="msapplication-TileColor" content="#cb3837">
+  <meta name="msapplication-TileImage" content="/static/images/touch-icons/mstile-144x144.png">
+  <meta name="msapplication-config" content="/static/images/touch-icons/browserconfig.xml">
+  <meta name="theme-color" content="#cb3837">
+
+<style id="iconic-responsive-css" type="text/css">/* Iconic Responsive Support Styles */
+.iconic-property-fill, .iconic-property-text {stroke: none !important;}
+.iconic-property-stroke {fill: none !important;}
+svg.iconic.iconic-fluid {height:100% !important;width:100% !important;}
+svg.iconic.iconic-sm:not(.iconic-size-md):not(.iconic-size-lg), svg.iconic.iconic-size-sm{width:16px;height:16px;}
+svg.iconic.iconic-md:not(.iconic-size-sm):not(.iconic-size-lg), svg.iconic.iconic-size-md{width:32px;height:32px;}
+svg.iconic.iconic-lg:not(.iconic-size-sm):not(.iconic-size-md), svg.iconic.iconic-size-lg{width:128px;height:128px;}
+svg.iconic-sm > g.iconic-md, svg.iconic-sm > g.iconic-lg, svg.iconic-md > g.iconic-sm, svg.iconic-md > g.iconic-lg, svg.iconic-lg > g.iconic-sm, svg.iconic-lg > g.iconic-md {display: none;}
+svg.iconic.iconic-icon-sm > g.iconic-lg, svg.iconic.iconic-icon-md > g.iconic-lg {display:none;}
+svg.iconic-sm:not(.iconic-icon-md):not(.iconic-icon-lg) > g.iconic-sm, svg.iconic-md.iconic-icon-sm > g.iconic-sm, svg.iconic-lg.iconic-icon-sm > g.iconic-sm {display:inline;}
+svg.iconic-md:not(.iconic-icon-sm):not(.iconic-icon-lg) > g.iconic-md, svg.iconic-sm.iconic-icon-md > g.iconic-md, svg.iconic-lg.iconic-icon-md > g.iconic-md {display:inline;}
+svg.iconic-lg:not(.iconic-icon-sm):not(.iconic-icon-md) > g.iconic-lg, svg.iconic-sm.iconic-icon-lg > g.iconic-lg, svg.iconic-md.iconic-icon-lg > g.iconic-lg {display:inline;}</style><style>.autocomplete-container, .autocomplete-suggestions, #powered-by-constructor-io { width: NaNpx !important }</style></head>
+
+<body itemscope="" itemtype="http://schema.org/WebSite" data-crumb="03q7oU7UsIZ3nrDtLn9kU03qSKSjqLaXmtE1wpnKOz9">
+  <meta itemprop="url" content="https://www.npmjs.com/">
+
+
+  <header class="anonymous   ">
+  <!-- logo -->
+  <div class="header-item brand-container">
+    <div class="logo-container" id="npm-logo">
+      <a href="https://www.npmjs.com/"><svg viewBox="0 0 18 7">
+	<path fill="#CB3837" d="M0,0v6h5v1h4v-1h9v-6"></path>
+	<path fill="#FFF" d="M1,1v4h2v-3h1v3h1v-4h1v5h2v-4h1v2h-1v1h2v-4h1v4h2v-3h1v3h1v-3h1v3h1v-4"></path>
+</svg></a>
+    </div>
+  </div>
+  <!-- /logo -->
+
+  <!-- search -->
+  <div class="header-item header-search-container">
+    <form class="site-search" id="npm-search" action="https://www.npmjs.com/search" method="get" itemprop="potentialAction" itemscope="" itemtype="http://schema.org/SearchAction">
+      <meta itemprop="target" content="https://www.npmjs.com/search?q={q}">
+      <div id="site-search-container">
+          <input name="q" value="" type="search" id="site-search" placeholder="find packages" tabindex="1" autocorrect="off" autocapitalize="off" itemprop="query-input" autocomplete="off">
+      </div>
+      <button tabindex="2" type="submit">
+        <span class="a11y-only">Search</span>
+        <svg viewBox="0 0 34 34" fill="none" stroke="currentColor">
+    <ellipse stroke-width="3" cx="16" cy="15" rx="12" ry="12"></ellipse>
+    <path d="M26 26 l 8 8" stroke-width="3" stroke-linecap="square"></path>
+</svg>
+      </button>
+    </form>
+  </div>
+
+
+  <!-- menu 1 -->
+  <div class="header-item user-info-container">
+    <div class="user-info">
+        <ul class="user-info-salutation single">
+          <li><a href="https://www.npmjs.com/signup">sign up</a> or <a href="https://www.npmjs.com/login">log in</a></li>
+          <li><a href="https://www.npmjs.com/login"><span class="a11y-only">log in</span><svg viewBox="-2765 2857 1080 1080">
+  <path fill="#986844" d="M-1811.2 3598.5c-.1-4.3-.3-11.3-.8-20.3-.9-15.8-2.7-40.9-6.6-70.7-6.9-52.6-21.6-130.1-52.6-200.4-22.3-50.4-53.5-97.1-90.3-135.2-4.4-20.5-16.7-66.5-43.5-104.8l-5-7.2-54 35.5c-44.5-22.4-91-33.7-138.6-33.7-47.5 0-94.1 11.3-138.6 33.7l-54-35.5-5 7.2c-26.8 38.3-39 84.3-43.5 104.8-36.8 38.1-68 84.8-90.3 135.3-31.1 70.3-45.8 147.8-52.6 200.4-6.1 46.6-7.2 81.6-7.5 93.8 16.6 14 31.3 29.8 46.9 45 17.2 16.7 39.4 28.2 59.1 41.6 1.7 1.1 3.1 2.6 4.2 4.1 15.7 10.4 31 15.4 50.2 19.5 19.2 4.1 35.6 5.6 55.6 7.3 38.7 3.2 77 7.7 115.5 12.6 43.1 5.4 86.5 11.5 130 13.1 41.6 1.5 81.8-9 121.8-19.3 8.9-2.3 17.9-4.5 26.8-6.8.6-4.2 3-8.1 6.7-10.4 40.1-25 81.2-48.2 122-72 5.9-3.5 13.7-1.9 17.9 3.3 9-8.9 17.1-18.2 24.3-27.9l.2-.2.2-.2c1.7-2.6 1.8-2.7 1.5-12.6z"></path>
+  <path fill="#FFF" d="M-1808.7 3494.8c-6.9-53.2-21.8-131.7-53.4-203.2-22.3-50.5-53.5-97.5-90.3-136.1-5.5-24.4-18.2-68.2-44.5-105.7l-10.6-15.1-57.3 37.7c-44.3-21.4-90.6-32.2-137.9-32.2-47.2 0-93.6 10.8-137.9 32.2l-57.3-37.7-10.6 15.1c-26.2 37.5-39 81.2-44.5 105.7-36.7 38.5-67.9 85.5-90.3 136.1-31.6 71.4-46.5 149.9-53.4 203.2-7.5 57.7-7.6 98-7.6 99.7v6.3l3.8 5.1c26 35 62.9 64.7 109.6 88.3 36.9 18.6 80 33.6 128.3 44.4 82.2 18.5 151.8 19 159.5 19h.6c7.7 0 77.3-.5 159.5-19 48.3-10.8 91.4-25.8 128.3-44.4 46.7-23.6 83.6-53.3 109.6-88.3l3.7-5v-6.3c.4-1.8.2-42.3-7.3-99.8zm-118.3 174.3c-34.8 17.6-75.8 31.8-121.8 42.1-80.7 18.1-150.4 18.3-153.4 18.3h-.6c-2.9 0-72.7-.2-153.4-18.3-46-10.3-87-24.5-121.8-42.1-41.7-21.1-74.7-47.2-98-77.6.4-22.5 5.1-167.5 58.6-288.5 21.8-49.3 52.4-94.9 88.5-131.8l1.8-1.9.5-2.6c2.7-13.1 12.9-56.4 36.3-93.4l37.2 24.5-7.3 16.6 22.8-11.9c43.3-22.6 88.7-34.1 135-34.1s91.7 11.5 135 34.1l22.8 11.9-7.3-16.6 37.2-24.5c23.4 37 33.6 80.4 36.3 93.4l.5 2.6 1.8 1.9c36.1 36.9 66.7 82.5 88.5 131.8 53.5 121 58.2 266.1 58.6 288.5-23.2 30.4-56.1 56.5-97.8 77.6zm-163-13c0 30.1-50.4 54.4-112.5 54.4s-112.5-24.4-112.5-54.4c0-30.1 50.4-54.4 112.5-54.4s112.5 24.3 112.5 54.4zm-223.5-65.3c0 12.3-10 22.3-22.3 22.3s-22.3-10-22.3-22.3 10-22.3 22.3-22.3c12.3-.1 22.3 9.9 22.3 22.3zm267.8 0c0 12.3-10 22.3-22.3 22.3s-22.3-10-22.3-22.3 10-22.3 22.3-22.3c12.3-.1 22.3 9.9 22.3 22.3z"></path>
+</svg></a></li>
+        </ul>
+    </div> <!-- .user-info -->
+  </div>
+  <!-- /menu 1 -->
+
+  <!-- menu 2 -->
+  <div class="header-item header-nav-menu-container">
+    <a href="https://www.npmjs.com/package/abstract-data-types#" id="npm-expansions" class="npm-expansions" data-event-trigger="click" data-event-name="npm-expansions">Notoriously Psychedelic Modules</a>
+
+    <div class="nav-menu-container" role="navigation">
+      <a class="nav-toggle drop-down-menu-toggle" href="https://www.npmjs.com/package/abstract-data-types#product-navigation"><span class="a11y-only">Toggle Navigation</span>
+        <svg viewBox="0 0 44 44">
+    <rect x="4" y="12" fill="currentColor" width="36" height="2"></rect>
+    <rect x="4" y="20" fill="currentColor" width="36" height="2"></rect>
+    <rect x="4" y="28" fill="currentColor" width="36" height="2"></rect>
+</svg>
+      </a>
+
+
+      <div class="drop-down-menu-container" role="menu">
+        <nav id="product-navigation" class="product-navigation drop-down-menu">
+          <ul class="drop-down-menu-section products-list">
+            <li><a id="nav-enterprise-link" href="https://www.npmjs.com/npm/enterprise">npm Enterprise</a></li>
+            <li><a id="nav-features-link" href="https://www.npmjs.com/features" data-event-trigger="click" data-event-name="features-nav-link">features</a></li>
+            <li><a id="nav-pricing-link" href="https://www.npmjs.com/pricing">pricing</a></li>
+            <li><a id="nav-docs-link" href="https://docs.npmjs.com/">documentation</a></li>
+            <li><a id="nav-support-link" href="https://www.npmjs.com/support">support</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <!-- /menu 2 -->
+
+
+
+</header>
+
+
+
+
+    <div class="container content">
+      
+<div class="content-column">
+
+  <h1 class="package-name">
+    <a href="https://www.npmjs.com/package/abstract-data-types" class="active">abstract-data-types</a>
+      <i class="icon-public"></i>
+  </h1>
+
+  <form class="star">
+    <input type="hidden" name="name" value="abstract-data-types">
+    <input id="star-input" type="checkbox" name="isStarred" value="true">
+    <label for="star-input" class="icon-star"></label>
+      <input type="hidden" name="crumb" value="03q7oU7UsIZ3nrDtLn9kU03qSKSjqLaXmtE1wpnKOz9">
+  </form>
+
+  <div id="readme" class="markdown">
+      <img src="./abstract-data-types_files/logo.png" alt="Gozumi abstract data types" align="right">
+<h1 class="package-name-redundant"><a id="user-content-abstract-data-types" class="deep-link" href="https://www.npmjs.com/package/abstract-data-types#abstract-data-types"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>abstract-data-types</h1>
+<p>The future of this module is that it will be able to return instances of the following abstract data types:</p>
+<ul>
+<li><strong>Queue</strong> <em>This is currently implemented</em></li>
+<li><strong>Linked List</strong> <em>This is currently implemented</em></li>
+<li><strong>Stack</strong> <em>This is currently implemented</em></li>
+<li><strong>Binary Tree</strong> <em>This is currently implemented</em></li>
+<li><strong>Binary Search Tree</strong> <em>This is currently implemented</em></li>
+<li><strong>Graph</strong></li>
+<li><strong>Hash Table</strong></li>
+<li><strong>Heap</strong></li>
+</ul>
+<h1><a id="user-content-installation" class="deep-link" href="https://www.npmjs.com/package/abstract-data-types#installation"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Installation</h1>
+<pre><code>$ npm install abstract-data-types
+</code></pre>
+<h1><a id="user-content-getting-started" class="deep-link" href="https://www.npmjs.com/package/abstract-data-types#getting-started"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Getting Started</h1>
+<p>The individual abstract data types are instantiated from factory functions that exist as properties of the <em>abstract-data-types</em> module. The module can be accessed as follows.</p>
+<pre><code>var adt = require('abstract-data-types');
+</code></pre>
+<p>The individual factory functions can be used to create instances of the abstract data types like this.</p>
+<pre><code>var q   = adt.createQueue();            // To create an empty Queue
+var ll  = adt.createLinkedList();       // To create an empty Linked List
+var s   = adt.createStack();            // To create an empty Stack
+var bt  = adt.createBinaryTree();       // To create an empty Binary Tree
+var bst = adt.createBinarySearchTree(); // To create an empty Binary Search Tree
+var g   = adt.createGraph();            // To create an empty Graph
+var ht  = adt.createHashTable();        // To create an empty Hash Table
+var h   = adt.createHeap();             // To create an empty Heap
+</code></pre>
+<p>The rest of this document explains each of the operations that can be performed these abstract data type instances.</p>
+<h2><a id="user-content-queue" class="deep-link" href="https://www.npmjs.com/package/abstract-data-types#queue"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Queue</h2>
+<p>This <em>Queue</em> is implements all the standard Queue operations. These are:</p>
+<ul>
+<li><strong>enqueue</strong>	adds a new item to the back of the queue</li>
+<li><strong>dequeue</strong>	returns the item at the front of the queue and removes it from the queue</li>
+<li><strong>front</strong>		returns the item at the front of the queue</li>
+<li><strong>size</strong>		returns the number of items in the queue</li>
+<li><strong>isEmpty</strong>	determines whether the queue is empty and returns true if it is and false otherwise</li>
+</ul>
+<h4><a id="user-content-enqueue" class="deep-link" href="https://www.npmjs.com/package/abstract-data-types#enqueue"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Enqueue</h4>
+<p>The <em>enqueue</em> operation adds a new item to the back of the queue. To do this call the <em>enqueue</em> method on a Queue instance passing it the data item you wish to add to the Queue.</p>
+<pre><code>q.enqueue(item);
+</code></pre>
+<h4><a id="user-content-dequeue" class="deep-link" href="https://www.npmjs.com/package/abstract-data-types#dequeue"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Dequeue</h4>
+<p>The <em>dequeue</em> method returns the item at the front of the queue and removes that item from the queue. To do this call <em>dequeue</em> on a queue object.</p>
+<pre><code>var frontItem = q.dequeue();
+</code></pre>
+<p>If <em>dequeue</em> is called on an empty queue, the following error is thrown.</p>
+<pre><code>new Error('adt-queue.dequeue(): Tried to dequeue an empty queue!');
+</code></pre>
+<h4><a id="user-content-front" class="deep-link" href="https://www.npmjs.com/package/abstract-data-types#front"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Front</h4>
+<p>The <em>front</em> method returns the item at the front of the queue, but unlike <em>dequeue</em> it does not remove it from the queue.</p>
+<pre><code>var frontItem = q.front();
+</code></pre>
+<p>If <em>front</em> is called on an empty queue, the following error is thrown.</p>
+<pre><code>new Error('adt-queue.front(): Tried to get the front of an empty queue!');
+</code></pre>
+<h4><a id="user-content-isempty" class="deep-link" href="https://www.npmjs.com/package/abstract-data-types#isempty"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>IsEmpty</h4>
+<p>The <em>isEmpty</em> method is a boolean function that, when called on a queue, returns <em>true</em> if the queue is empty and false otherwise.</p>
+<pre><code>q.isEmpty();
+</code></pre>
+<h2><a id="user-content-linked-list" class="deep-link" href="https://www.npmjs.com/package/abstract-data-types#linked-list"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Linked List</h2>
+<p>The <em>Linked List</em> implements all of the standard Linked List functions. These are given below:</p>
+<ul>
+<li><strong>add</strong>		adds a new item to the list at a specific position</li>
+<li><strong>remove</strong>	removes an item from the list at a specific position</li>
+<li><strong>get</strong>		returns the item at at a specific position in the list</li>
+<li><strong>size</strong>		returns the number of items in the List</li>
+<li><strong>isEmpty</strong>	determines whether the List is empty and returns true if it is and false otherwise</li>
+</ul>
+<p>The postion index starts from 0.</p>
+<h4><a id="user-content-add" class="deep-link" href="https://www.npmjs.com/package/abstract-data-types#add"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Add</h4>
+<p>The add method takes the item to be added to the list and the position that the item should be added in. If the position is less than or equal to 0, the item is added to the front of the list. If the position is greater than or equal to the size of the list, the item is added to the end of the list.</p>
+<pre><code>ll.add(position, item);
+</code></pre>
+<h4><a id="user-content-remove" class="deep-link" href="https://www.npmjs.com/package/abstract-data-types#remove"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Remove</h4>
+<p>The remove method removes the item at a specific position in the list. If the position requested is less than 0 or geater then or equal to the length of the list, an error is thrown.</p>
+<pre><code>ll.remove(position);
+</code></pre>
+<h4><a id="user-content-get" class="deep-link" href="https://www.npmjs.com/package/abstract-data-types#get"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Get</h4>
+<p>The get method returns the item at a specific position in the list. If the position requested is less than 0 or geater then or equal to the length of the list, an error is thrown.</p>
+<pre><code>ll.get(position);
+</code></pre>
+<h4><a id="user-content-size" class="deep-link" href="https://www.npmjs.com/package/abstract-data-types#size"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Size</h4>
+<p>The size method returns the number of items in the list.</p>
+<pre><code>ll.size();
+</code></pre>
+<h4><a id="user-content-isempty-1" class="deep-link" href="https://www.npmjs.com/package/abstract-data-types#isempty-1"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>IsEmpty</h4>
+<p>The <em>isEmpty</em> method is a boolean function that, when called on a list, returns <em>true</em> if the list is empty and false otherwise.</p>
+<pre><code>ll.isEmpty();
+</code></pre>
+<h2><a id="user-content-stack" class="deep-link" href="https://www.npmjs.com/package/abstract-data-types#stack"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Stack</h2>
+<p>The <em>Stack</em> implements all of the standard Stack functions. These are given below:</p>
+<ul>
+<li><strong>push</strong>		adds a new item to the top of the stack</li>
+<li><strong>pop</strong>		returns the item at the top of the stack and removes it from the stack</li>
+<li><strong>top</strong>		returns the item at the top of the stack and leaves it on the stack</li>
+<li><strong>size</strong>		returns the number of items in the stack</li>
+<li><strong>isEmpty</strong>	determines whether the stack is empty and returns true if it is and false otherwise</li>
+</ul>
+<h4><a id="user-content-push" class="deep-link" href="https://www.npmjs.com/package/abstract-data-types#push"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Push</h4>
+<p>The push method adds a new item to the top of the stack. It also returns the stack so that push opertations can be chained.</p>
+<pre><code>s.push(item);
+</code></pre>
+<h4><a id="user-content-pop" class="deep-link" href="https://www.npmjs.com/package/abstract-data-types#pop"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pop</h4>
+<p>The pop method returns the item at the top of the stack and removed it from the stack.</p>
+<pre><code>s.pop();
+</code></pre>
+<h4><a id="user-content-top" class="deep-link" href="https://www.npmjs.com/package/abstract-data-types#top"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Top</h4>
+<p>The pop method returns the item at the top of the stack and leaves it on the stack.</p>
+<pre><code>s.top();
+</code></pre>
+<h4><a id="user-content-size-1" class="deep-link" href="https://www.npmjs.com/package/abstract-data-types#size-1"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Size</h4>
+<p>The size method returns the number of items in the stack.</p>
+<pre><code>s.size();
+</code></pre>
+<h4><a id="user-content-isempty-2" class="deep-link" href="https://www.npmjs.com/package/abstract-data-types#isempty-2"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>IsEmpty</h4>
+<p>The <em>isEmpty</em> method is a boolean function that, when called on a stack, returns <em>true</em> if the stack is empty and false otherwise.</p>
+<pre><code>s.isEmpty();
+</code></pre>
+<h2><a id="user-content-binary-tree" class="deep-link" href="https://www.npmjs.com/package/abstract-data-types#binary-tree"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Binary Tree</h2>
+<p>The <em>Binary Tree</em> in this module implements the standard methods of the Binary Tree abstract data type. These methods are:</p>
+<ul>
+<li><strong>isEmpty</strong>       determines whether the tree is empty and returns true if it is and false otherwise</li>
+<li><strong>getRootItem</strong>   returns the item at the root of the tree</li>
+<li><strong>setRootItem</strong>   updates the item at the root of the tree</li>
+<li><strong>getLeftTree</strong>   returns the left sub tree</li>
+<li><strong>getRightTree</strong>  returns the Right sub tree</li>
+<li><strong>attachLeft</strong>    attaches at tree or an item as the left sub tree</li>
+<li><strong>attachRight</strong>   attaches at tree or an item as the right sub tree</li>
+<li><strong>detachLeft</strong>    removes the left sub tree</li>
+<li><strong>detachRight</strong>   removes the right sub tree</li>
+<li><strong>count</strong>         returns the number of nodes in the tree</li>
+</ul>
+<h4><a id="user-content-creation" class="deep-link" href="https://www.npmjs.com/package/abstract-data-types#creation"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Creation</h4>
+<p>The factory function used to create a new <em>Binary Tree</em> can be called in the following 2 ways:</p>
+<ul>
+<li>
+<p><strong>By passing in no arguments</strong> - this will create an empty tree.</p>
+<p>var bt = adt.createBinaryTree();</p>
+</li>
+<li>
+<p><strong>By passing in and item</strong> - this will create a single node tree with the item at the root.</p>
+<p>var bt = adt.createBinaryTree(item);</p>
+</li>
+</ul>
+<h4><a id="user-content-is-empty" class="deep-link" href="https://www.npmjs.com/package/abstract-data-types#is-empty"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Is Empty</h4>
+<p>The <em>isEmpty</em> method is a boolean function that, when called on a tree, returns <em>true</em> if the tree is empty and false otherwise.</p>
+<pre><code>bt.isEmpty();
+</code></pre>
+<h4><a id="user-content-get-root-item" class="deep-link" href="https://www.npmjs.com/package/abstract-data-types#get-root-item"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Get Root Item</h4>
+<p>This method returns the item at the root of the tree and is called as follows.</p>
+<pre><code>bt.getRootItem();
+</code></pre>
+<p>If this method is called on an empty tree it throws an error as follows.</p>
+<pre><code>throw new Error('adt-binary-tree.getRootItem(): Tried to get the root item of an empty tree');
+</code></pre>
+<h4><a id="user-content-set-root-item" class="deep-link" href="https://www.npmjs.com/package/abstract-data-types#set-root-item"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Set Root Item</h4>
+<p>This method puts an item at the root of the tree and is called as follows.</p>
+<pre><code>bt.setRootItem(item);
+</code></pre>
+<h4><a id="user-content-get-left-tree" class="deep-link" href="https://www.npmjs.com/package/abstract-data-types#get-left-tree"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Get Left Tree</h4>
+<p>This method returns the left sub tree.</p>
+<pre><code>bt.getLeftTree();
+</code></pre>
+<p>If this method is called on an empty tree it throws an error as follows.</p>
+<pre><code>throw new Error('adt-binary-tree.getLeftTree(): Tried to get the left tree of an empty tree');
+</code></pre>
+<h4><a id="user-content-get-right-tree" class="deep-link" href="https://www.npmjs.com/package/abstract-data-types#get-right-tree"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Get Right Tree</h4>
+<p>This method returns the right sub tree.</p>
+<pre><code>bt.getRightTree();
+</code></pre>
+<p>If this method is called on an empty tree it throws an error as follows.</p>
+<pre><code>throw new Error('adt-binary-tree.getLeftTree(): Tried to get the left tree of an empty tree');
+</code></pre>
+<h4><a id="user-content-attach-left-tree" class="deep-link" href="https://www.npmjs.com/package/abstract-data-types#attach-left-tree"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Attach Left Tree</h4>
+<p>This method can be called by either passing in another <em>Binary Tree</em>, or by passing in an item that is not a <em>Binary Tree</em>.</p>
+<p>If a <em>Binary Tree</em> is passed in, that tree will be attached as the left sub tree. The method is called like this.</p>
+<pre><code>bt.attachLeft( tree );
+</code></pre>
+<p>If a non <em>Binary Tree</em> item is passed in, a new single node tree is created out of that item and this new tree is attached as the left sub tree.</p>
+<pre><code>bt.attachLeft( item );
+</code></pre>
+<p>If this method is called on an empty tree it throws an error as follows.</p>
+<pre><code>throw new Error('adt-binary-tree.attachLeft(): Attempt to attach a left sub tree to an empty tree');	
+</code></pre>
+<h4><a id="user-content-attach-right-tree" class="deep-link" href="https://www.npmjs.com/package/abstract-data-types#attach-right-tree"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Attach Right Tree</h4>
+<p>This method can be called by either passing in another <em>Binary Tree</em>, or by passing in an item that is not a <em>Binary Tree</em>.</p>
+<p>If a <em>Binary Tree</em> is passed in, that tree will be attached as the right sub tree. The method is called like this.</p>
+<pre><code>bt.attachRight( tree );
+</code></pre>
+<p>If a non <em>Binary Tree</em> item is passed in, a new single node tree is created out of that item and this new tree is attached as the right sub tree.</p>
+<pre><code>bt.attachRight( item );
+</code></pre>
+<p>If this method is called on an empty tree it throws an error as follows.</p>
+<pre><code>throw new Error('adt-binary-tree.attachRight(): Attempt to attach a right sub tree to an empty tree');	
+</code></pre>
+<h4><a id="user-content-detach-left-tree" class="deep-link" href="https://www.npmjs.com/package/abstract-data-types#detach-left-tree"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Detach Left Tree</h4>
+<p>This method is used to remove the left sub tree from the main tree. It also returns the tree that it detaches. it is called as follows.</p>
+<pre><code>bt.detachLeft();
+</code></pre>
+<p>If this method is called on an empty tree it throws an error as follows.</p>
+<pre><code>throw new Error('adt-binary-tree.detachLeft(): Attempt to detach the left sub tree of an empty tree');	
+</code></pre>
+<h4><a id="user-content-detach-right-tree" class="deep-link" href="https://www.npmjs.com/package/abstract-data-types#detach-right-tree"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Detach Right Tree</h4>
+<p>This method is used to remove the right sub tree from the main tree. It also returns the tree that it detaches. it is called as follows.</p>
+<pre><code>bt.detachRight();
+</code></pre>
+<p>If this method is called on an empty tree it throws an error as follows.</p>
+<pre><code>throw new Error('adt-binary-tree.detachRight(): Attempt to detach the right sub tree of an empty tree');	
+</code></pre>
+<h4><a id="user-content-count" class="deep-link" href="https://www.npmjs.com/package/abstract-data-types#count"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Count</h4>
+<p>This method returns the number of nodes in the tree.</p>
+<pre><code>bt.count();
+</code></pre>
+<h2><a id="user-content-binary-search-tree" class="deep-link" href="https://www.npmjs.com/package/abstract-data-types#binary-search-tree"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Binary Search Tree</h2>
+<p>The <em>Binary Search Tree</em> implements the following Binary Search Tree methods.</p>
+<ul>
+<li><strong>insert</strong>        inserts a new item into the search tree in the correct position, maintaining the validity of the binary search tree</li>
+<li><strong>delete</strong>        removes an item from the tree maintaining the validity of the binary search tree</li>
+<li><strong>retrieve</strong>      returns a specific item in the tree</li>
+<li><strong>isEmpty</strong>       determines whether the tree is empty and returns true if it is and false otherwise</li>
+<li><strong>getRootItem</strong>   returns the item at the root of the tree</li>
+<li><strong>getLeftTree</strong>   returns the left sub tree</li>
+<li><strong>getRightTree</strong>  returns the Right sub tree</li>
+<li><strong>count</strong>         returns the number of nodes in the tree</li>
+</ul>
+<h4><a id="user-content-insert" class="deep-link" href="https://www.npmjs.com/package/abstract-data-types#insert"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Insert</h4>
+<p>This method inserts an item into the tree and makes sure that the validity of the binary seach tree is maintained.</p>
+<pre><code>bst.insert(item);
+</code></pre>
+<p>The search key used to determine the position of an item within the binary search tree as it is being inserted is derived from the item in the following way.</p>
+<ol>
+<li>
+<p>If the item is null, the item is not inserted into the tree and the following error is thrown.</p>
+<p>throw new Error('adt-binary-search-tree utils.getKey(): item is null');</p>
+</li>
+<li>
+<p>If the item is an object that does not have a property named 'key', the item is not inserted into the tree and the following error is thrown.</p>
+<p>throw new Error('adt-binary-search-tree utils.getKey(): item has no key');</p>
+</li>
+<li>
+<p>If the item is an object with a property named 'key' and that key property is null, the item is not inserted into the tree and the following error is thrown</p>
+<p>throw new Error('adt-binary-search-tree utils.getKey(): item is null');</p>
+</li>
+<li>
+<p>If the item is an object with a property named 'key' and that key property is an object, the item is not inserted into the tree and the following error is thrown</p>
+<p>throw new Error('adt-binary-search-tree utils.getKey(): item.key is an object');</p>
+</li>
+<li>
+<p>If the item is an object with a property named 'key' and this key property is not an object and is not null, the value of this key property is used as the item's search key within the tree.</p>
+</li>
+<li>
+<p>If the item is not an object and is not null, the item value is used as the item's search key within the tree.</p>
+</li>
+</ol>
+<h4><a id="user-content-delete" class="deep-link" href="https://www.npmjs.com/package/abstract-data-types#delete"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Delete</h4>
+<p>This method removes the item identified by the parameter 'key' from the tree and makes sure that the validity of the binary seach tree is maintained.</p>
+<pre><code>bst.delete(key);
+</code></pre>
+<p>If the key does not exist in the tree, the following error is thrown.</p>
+<pre><code>throw new Error('adt-binary-search-tree.delete(): The key is not in the tree');
+</code></pre>
+<h4><a id="user-content-retrieve" class="deep-link" href="https://www.npmjs.com/package/abstract-data-types#retrieve"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Retrieve</h4>
+<p>This method returns the item identified by the parameter 'key' from the tree and leaves the tree unchanged.</p>
+<pre><code>bst.retieve(key);
+</code></pre>
+<p>The method returns <em>null</em> if the key does not exist in the tree.</p>
+<h4><a id="user-content-is-empty-1" class="deep-link" href="https://www.npmjs.com/package/abstract-data-types#is-empty-1"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Is Empty</h4>
+<p>The <em>isEmpty</em> method is a boolean function that, when called on a tree, returns <em>true</em> if the tree is empty and false otherwise.</p>
+<pre><code>bst.isEmpty();
+</code></pre>
+<h4><a id="user-content-get-root-item-1" class="deep-link" href="https://www.npmjs.com/package/abstract-data-types#get-root-item-1"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Get Root Item</h4>
+<p>This method returns the item at the root of the tree and is called as follows.</p>
+<pre><code>bst.getRootItem();
+</code></pre>
+<p>If this method is called on an empty tree it throws an error as follows.</p>
+<pre><code>throw new Error('adt-binary-search-tree.getRootItem(): Tried to get the root item of an empty tree');
+</code></pre>
+<h4><a id="user-content-get-left-tree-1" class="deep-link" href="https://www.npmjs.com/package/abstract-data-types#get-left-tree-1"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Get Left Tree</h4>
+<p>This method returns the left sub tree.</p>
+<pre><code>bst.getLeftTree();
+</code></pre>
+<p>If this method is called on an empty tree it throws an error as follows.</p>
+<pre><code>throw new Error('adt-binary-search-tree.getLeftTree(): Tried to get the left tree of an empty tree');
+</code></pre>
+<h4><a id="user-content-get-right-tree-1" class="deep-link" href="https://www.npmjs.com/package/abstract-data-types#get-right-tree-1"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Get Right Tree</h4>
+<p>This method returns the right sub tree.</p>
+<pre><code>bts.getRightTree();
+</code></pre>
+<p>If this method is called on an empty tree it throws an error as follows.</p>
+<pre><code>throw new Error('adt-binary-search-tree.getLeftTree(): Tried to get the left tree of an empty tree');
+</code></pre>
+<h4><a id="user-content-count-1" class="deep-link" href="https://www.npmjs.com/package/abstract-data-types#count-1"><svg aria-hidden="true" class="deep-link-icon" height="16" version="1.1" width="16"><path d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Count</h4>
+<p>This method returns the number of nodes in the tree.</p>
+<pre><code>bst.count();
+</code></pre>
+
+  </div>
+
+</div>
+
+<div class="sidebar">
+
+    <div class="promotion" data-promotion-id="726" data-promotion-spot="packagePage"><div class="marketing">
+<h3 id="marketing-texthed">
+<a href="https://www.npmjs.com/enterprise" title="npm Enterprise">Use this within your firewall</a></h3>
+
+<p>Combine open-source packages with your private code and publish to a private registry behind the firewall. <a href="https://www.npmjs.com/enterprise" title="npm Enterprise" target="_blank">npm ♥ enterprise developers</a></p></div></div>
+
+    <div class="autoselect-wrapper npm-install icon-download">
+      <input type="text" value="npm i abstract-data-types" readonly="">
+      <p><a href="https://www.npmjs.com/package/abstract-data-types/tutorial">how? learn more</a></p>
+    </div>
+
+  <ul class="box">
+
+      <li class="last-publisher">
+          <a href="https://www.npmjs.com/~gozumi">
+            <img src="./abstract-data-types_files/52701b328cb3194ba0470a5099e5bc1c" alt="gozumi">
+            <span>gozumi</span>
+          </a>
+          published
+          <span data-date="2014-09-13T10:34:08.841Z" data-date-format="relative">3 years ago</span>
+      </li>
+
+    <li>
+      <strong>0.1.18</strong>
+      is the latest
+        of 19 releases
+    </li>
+
+      <li>
+        <a href="https://github.com/gozumi/abstract-data-types">github.com/gozumi/abstract-data-types</a>
+      </li>
+
+
+      <li>
+          <a href="http://spdx.org/licenses/MIT">MIT</a>
+          <img class="osi" alt="Licensed on OSI-approved terms" src="./abstract-data-types_files/osi.svg">®
+      </li>
+
+  </ul>
+
+    <h3 title="collaborators">
+      Collaborators
+      <small><a href="https://www.npmjs.com/package/abstract-data-types/access">list</a></small>
+    </h3>
+
+    <ul class="humans collaborators">
+        <li>
+            <a href="https://www.npmjs.com/~gozumi" rel="tipsy" original-title="gozumi">
+                <img src="./abstract-data-types_files/52701b328cb3194ba0470a5099e5bc1c" alt="gozumi">
+            </a>
+        </li>
+
+
+    </ul>
+
+    <h3>Stats</h3>
+    <ul class="box">
+
+        <li>
+          <strong class="pretty-number daily-downloads">19</strong>
+          downloads in the last day
+        </li>
+        <li>
+          <strong class="pretty-number weekly-downloads">41</strong>
+          downloads in the last week
+        </li>
+        <li>
+          <strong class="pretty-number monthly-downloads">84</strong>
+          downloads in the last month
+        </li>
+
+        <li id="issues" data-ghapi="https://api.github.com/repos/gozumi/abstract-data-types">
+          <span class="original" style="display: none;">Have an issue? <a href="https://github.com/gozumi/abstract-data-types/issues">No open issues</a></span>
+            <span class="enhanced" style="">
+              <a href="https://github.com/gozumi/abstract-data-types/issues">No open issues</a> on GitHub
+            </span>
+        </li>
+
+        <li id="pull_requests" style="">
+          <a href="https://github.com/gozumi/abstract-data-types/pulls">No open pull requests</a> on GitHub
+        </li>
+
+    </ul>
+
+        <h3>Try it out</h3>
+        <ul class="box">
+          <li class="runkit"><a href="https://runkit.com/npm/abstract-data-types" target="_blank">Test abstract-data-types in your browser.</a></li>
+        </ul>
+
+
+  <h3>Keywords</h3>
+  <p class="list-of-links">
+        <a href="https://www.npmjs.com/browse/keyword/abstract">abstract</a>, 
+        <a href="https://www.npmjs.com/browse/keyword/data">data</a>, 
+        <a href="https://www.npmjs.com/browse/keyword/type">type</a>, 
+        <a href="https://www.npmjs.com/browse/keyword/queue">queue</a>, 
+        <a href="https://www.npmjs.com/browse/keyword/adt">adt</a>, 
+        <a href="https://www.npmjs.com/browse/keyword/abstract%20data%20type">abstract data type</a>, 
+        <a href="https://www.npmjs.com/browse/keyword/abstract-data-type">abstract-data-type</a>, 
+        <a href="https://www.npmjs.com/browse/keyword/link%20list">link list</a>, 
+        <a href="https://www.npmjs.com/browse/keyword/linked">linked</a>, 
+        <a href="https://www.npmjs.com/browse/keyword/list">list</a>, 
+        <a href="https://www.npmjs.com/browse/keyword/stack">stack</a>, 
+        <a href="https://www.npmjs.com/browse/keyword/binary%20tree">binary tree</a>, 
+        <a href="https://www.npmjs.com/browse/keyword/binary-tree">binary-tree</a>, 
+        <a href="https://www.npmjs.com/browse/keyword/binary">binary</a>, 
+        <a href="https://www.npmjs.com/browse/keyword/tree">tree</a>, 
+        <a href="https://www.npmjs.com/browse/keyword/binary%20search%20tree">binary search tree</a>, 
+        <a href="https://www.npmjs.com/browse/keyword/binary-search-tree">binary-search-tree</a>, 
+        <a href="https://www.npmjs.com/browse/keyword/search%20tree">search tree</a>, 
+        <a href="https://www.npmjs.com/browse/keyword/search">search</a>
+  </p>
+
+  <h3>Dependencies </h3>
+  <p class="list-of-links">
+      None
+  </p>
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "abstract-data-types",
+      "description": "This module aims to provide a full suite of abstract data types. At present it provides the abstract data type, Queue, Linked List, Stack, Binary Tree an Binary Search Tree.",
+      "url": "https://www.npmjs.com/package/abstract-data-types",
+      "keywords": "abstract,data,type,queue,adt,abstract data type,abstract-data-type,link list,linked,list,stack,binary tree,binary-tree,binary,tree,binary search tree,binary-search-tree,search tree,search",
+      "applicationCategory": "DeveloperApplication",
+      "offers": {
+         "@type": "Offer",
+         "price": "0.00"
+      }
+    }
+  </script>
+
+    <div class="hiring-container" data-template="sidebar"><div class="ad">
+  <p>
+    <a href="http://www.tinder.com/jobs" title="Tinder">Tinder</a> is hiring.
+    <a class="quiet" href="https://www.npmjs.com/whoshiring">View more…</a>
+  </p>
+</div></div>
+</div>
+
+
+    </div>
+
+  <footer class="pane bg-npm-navy-1">
+  
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <h3 class="h4 type-npm-pastel-3">You Need Help</h3>
+          <hr class="divider-1">
+          <ul class="list-unstyled h6 em-default">
+            <li class="pbl"><a class="type-neutral-11" href="https://docs.npmjs.com/">Documentation</a></li>
+            <li class="pbl"><a class="type-neutral-11" href="https://www.npmjs.com/support">Support / Contact Us</a></li>
+            <li class="pbl"><a class="type-neutral-11" href="http://status.npmjs.org/">Registry Status</a></li>
+            <li class="pbl"><a class="type-neutral-11" href="https://github.com/npm/www/issues">Website Issues</a></li>
+            <li class="pbl"><a class="type-neutral-11" href="https://github.com/npm/npm/issues">CLI Issues</a></li>
+            <li class="pbl"><a class="type-neutral-11" href="https://www.npmjs.com/policies/security">Security</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-md-6 col-md-offset-1">
+          <h3 class="h4 type-npm-pastel-3">About npm</h3>
+          <hr class="divider-1">
+          <ul class="list-unstyled h6 em-default">
+            <li class="pbl"><a class="type-neutral-11" href="https://www.npmjs.com/about">About npm, Inc</a></li>
+            <li class="pbl"><a class="type-neutral-11" href="https://www.npmjs.com/jobs">Jobs</a></li>
+            <li class="pbl"><a class="type-neutral-11" href="https://www.npmjs.com/npm-weekly">npm Weekly</a></li>
+            <li class="pbl"><a class="type-neutral-11" href="http://blog.npmjs.org/">Blog</a></li>
+            <li class="pbl"><a class="type-neutral-11" href="https://twitter.com/npmjs">Twitter</a></li>
+            <li class="pbl"><a class="type-neutral-11" href="https://github.com/npm">GitHub</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-md-6 col-md-offset-1">
+          <h3 class="h4 type-npm-pastel-3">Legal Stuff</h3>
+          <hr class="divider-1">
+          <ul class="list-unstyled h6 em-default">
+            <li class="pbl"><a class="type-neutral-11" href="https://www.npmjs.com/policies/terms">Terms of Use</a></li>
+            <li class="pbl"><a class="type-neutral-11" href="https://www.npmjs.com/policies/conduct">Code of Conduct</a></li>
+            <li class="pbl"><a class="type-neutral-11" href="https://www.npmjs.com/policies/disputes">Package Name Disputes</a></li>
+            <li class="pbl"><a class="type-neutral-11" href="https://www.npmjs.com/policies/privacy">Privacy Policy</a></li>
+            <li class="pbl"><a class="type-neutral-11" href="https://www.npmjs.com/policies/receiving-reports">Reporting Abuse</a></li>
+            <li class="pbl"><a class="type-neutral-11" href="https://www.npmjs.com/policies/">Other policies</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="txt-c container">
+      <a class="npm-loves-you type-neutral-11" href="https://www.npmjs.com/">
+        npm loves you
+      </a>
+    </div>
+  </footer>
+
+  <script defer="" async="" src="./abstract-data-types_files/3318080746.js.download"></script>
+  <script defer="" async="" src="./abstract-data-types_files/elqCfg.min.js.download"></script><!-- Eloqua -->
+
+
+
+<!-- pid&#x3D;8548 e17d83560c72a2e9a7244f9ddc06f845d90b499b https://www.npmjs.com www-18-west.internal.npmjs.com  -->
+<div class="drop-down-menu-overlay" data-drop-down-menu="product-navigation"></div><div class="autocomplete-container" style="position: absolute; display: none; max-height: 400px; z-index: 9999;"><div class="autocomplete-suggestions" style="position: absolute; display: none; max-height: 400px; z-index: 9999;"></div></div></body></html>

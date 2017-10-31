@@ -1,0 +1,16 @@
+﻿<table>
+    <tr>
+        <td>Status</td>
+        <td>@Html.DropDownList("CandProfile_StatusId",ViewBag.CandProfileStatus as List<SelectListItem>,new{@class="form-control1"})</td>
+    </tr>
+    <tr>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <input type="submit" value="Save" class="btn btn-default" onclick="UpdateCandProfileStatus()"/>
+        </td>
+    </tr>
+</table>
+

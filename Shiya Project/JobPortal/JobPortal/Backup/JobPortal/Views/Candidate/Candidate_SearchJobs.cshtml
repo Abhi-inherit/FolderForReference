@@ -1,0 +1,96 @@
+﻿@model IEnumerable<JobPortal.Models.Jobs>
+
+<div class="banner">
+    <div class="grid-form">
+      <div class="grid-form1">
+  <div class="panel-body">
+      <div  class="form-horizontal">
+		  <div class="form-group mb-n">
+              <label class="col-md-2 control-label">Job Title</label>
+              <div class="col-md-8"><input type="text" class="form-control1" value="" id="txt_JobName"/></div>
+		  </div>
+          <div class="form-group mb-n">
+              <label class="col-md-2 control-label">Skills</label>
+              <div class="col-md-8"><input type="text" class="form-control1" value="" id="txt_Skills"/></div>
+		  </div>
+
+	  </div>
+	</div>
+
+      <div class="panel-footer">
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+                <input type="button" value="Search" class="btn-primary btn"  onclick ="SearchJobs()" />
+			</div>
+		</div>
+	 </div>
+ 
+  </div>
+        </div>
+</div>
+ <div class="inbox-mail">
+	<div class="col-md-4 compose">
+	
+<div class="content-box" id="Category">
+			<ul>
+			<li><span>Category</span></li>
+			</ul>
+        </div>
+
+        <div class="content-box" id="Location">
+			<ul>
+			<li><span>Location</span></li>
+			</ul>
+        </div>
+
+        <div class="content-box" id="Experience">
+			<ul>
+			<li><span>Experience</span></li>
+			</ul>
+        </div>
+</div>
+<!-- tab content -->
+<div class="col-md-8 tab-content tab-content-in">
+<div class="tab-pane active text-style" id="tab1">
+  <div class="inbox-right">
+         	
+            <div class="mailbox-content">
+               <div class="mail-toolbar clearfix">
+	
+			    <div class="float-right">
+
+                            <div class="btn-group">
+                                <a class="btn btn-default"><i class="fa fa-angle-left"></i></a>
+                                <a class="btn btn-default"><i class="fa fa-angle-right"></i></a>
+                            </div>
+                        
+			        
+			    </div>
+				
+               </div>
+                <table class="table">
+                    <tbody>
+                        @foreach (var item in Model) {
+                        <tr class="table-row">
+                          @*  <td class="table-img">
+                               <img src="images/in.jpg" alt="" />
+                            </td>*@
+                            <td class="table-text">
+                            	<h6> @Html.DisplayFor(modelItem => item.Job_Title)</h6>
+                                <p>@Html.DisplayFor(modelItem => item.Job_Description)</p>
+                            </td>
+                            <td>
+                            	<input type="button" value="View Details" class="btn btn-xs btn-info" onclick="Get_A_JobDetails(@item.Job_Id)" />
+                            </td>
+                            
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+               </div>
+            </div>
+</div>
+
+</div>
+<div class="clearfix"> </div>
+   </div>

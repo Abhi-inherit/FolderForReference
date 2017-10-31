@@ -1,0 +1,152 @@
+Javascript
+
+	Allow client-side script to interact with the
+	user and make dynamic pages.
+
+	JavaScript is a lightweight, interpreted programming language.
+
+	Open and cross-platform
+
+	Increased interactivity
+
+	Richer interfaces
+
+JavaScript Development Tools
+
+	Microsoft FrontPage
+	Macromedia Dreamweaver MX
+	Macromedia HomeSite 5 -
+
+Common uses of JavaScript include:
+
+	Alert messages
+	Popup windows
+	Dynamic dropdown 
+	menus
+	Form validation
+	Displaying date/time
+
+Javascript code
+
+	<script language="javascript" type="text/javascript">
+ 		JavaScript code
+	</script>
+Case Sensitivity
+Comments in JavaScript
+	 //
+	 /* and */
+
+PLACEMENT 
+	Script in <head>...</head> section.
+	Script in <body>...</body> section.
+	Script in <body>...</body> and <head>...</head> sections.
+	Script in an external file and then include in <head>...</head> section.
+
+<html>
+<head>
+<script type="text/javascript" src="filename.js" ></script>
+</head>
+<body>
+.......
+</body>
+</html>
+
+JavaScript Datatypes
+	Numbers, e.g., 123, 120.50 etc.
+	Strings of text, e.g. "This text string" etc.
+	Boolean, e.g. true or false.
+
+JavaScript Variables
+	
+	Global Variables:
+	Local Variables:
+	var money;
+	var name;
+ Not use any of the JavaScript reserved keywords
+	break or boolean
+	Not start with a numeral (0-9).(start with underscore).
+	case-sensitive.(name and NAME)
+
+OPERATORS 
+
+	Arithmetic Operators
+		+ (Addition)
+		- (Subtraction)
+		* (Multiplication)
+		/ (Division)
+		% (Modulus)(Outputs the remainder of an integer division)
+		++ (Increment)
+		-- (Decrement)
+
+	Comparison Operators
+		== (Equal)
+		!= (Not Equal)
+		> (Greater than)
+		< (Less than)
+		>= (Greater than or Equal to)
+		<= (Less than or Equal to)
+
+	Logical (or Relational) Operators
+		&& (Logical AND)
+		|| (Logical OR)
+		! (Logical NOT)
+
+	Assignment Operators
+		= (Simple Assignment )
+		+= (Add and Assignment)
+		-= (Subtract and Assignment)
+		*= (Multiply and Assignment)
+		/= (Divide and Assignment)
+		%= (Modules and Assignment)
+
+	Conditional (or ternary) Operators
+		? : (Conditional )
+			If Condition is true? Then value X : Otherwise value Y
+IF-ELSE 
+
+	if (expression){
+ 	Statement(s) to be executed if expression is true
+	}
+
+	if (expression){
+ 	Statement(s) to be executed if expression is true
+	}else{
+	Statement(s) to be executed if expression is false
+	}	
+
+	if (expression 1){
+ 	Statement(s) to be executed if expression 1 is true
+	}else if (expression 2){
+ 	Statement(s) to be executed if expression 2 is true
+	}else if (expression 3){
+ 	Statement(s) to be executed if expression 3 is true
+	}else{
+ 	Statement(s) to be executed if no expression is true
+	}
+
+SWITCH-CASE 
+	When all of the branches depend on the value of a single variable.
+
+	switch (expression)
+	{
+ 	case condition 1: statement(s)
+ 	break;
+ 	case condition 2: statement(s)
+ 	break;
+ 	case condition n: statement(s)
+ 	break;
+ 	default: statement(s)
+	}
+
+WHILE LOOP 
+	situation where you need toperform an action over and over again. 
+	In such situations, you would need to write loop statements to 
+	reduce the number of lines.
+	
+	The purpose of a while loop is to execute a statement or code
+        block repeatedly as long as an expression is true. Once the expression
+	becomes false, the loop terminates.
+
+do...whileLoop
+	 loop will always be executed
+	 at least once, even if the condition is false.

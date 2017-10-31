@@ -1,0 +1,49 @@
+﻿@model JobPortal.Models.Jobs
+
+<fieldset>
+    <legend> @Html.DisplayFor(model => model.Job_Title)</legend>
+    <table>
+
+    <tr>
+     <td style="width:250px">Category</td>
+    <td>
+        @Html.DisplayFor(model => model.CategoryName)
+    </td>
+        </tr><tr>
+        <td>Company</td>
+    <td>
+        @Html.DisplayFor(model => model.EmployerName)
+    </td></tr> <tr>
+    <td>Designation</td>
+    <td>
+        @Html.DisplayFor(model => model.Job_Designation)
+    </td></tr> 
+<tr>
+    <td>Description</td>
+    <td>
+        @Html.DisplayFor(model => model.Job_Description)
+    </td>
+    </tr> 
+    <tr>
+    <td>Location</td>
+    <td>
+        @Html.DisplayFor(model => model.LocationName)
+    </td>
+        </tr> <tr>
+    <td>Experience Needed</td>
+    <td>
+        @Html.DisplayFor(model => model.Experience)
+    </td>
+</tr>
+        <tr>
+
+        </tr>
+<tr>
+    <td></td>
+    <td>
+
+   <input type="button" value="Apply" class="btn btn-xs btn-info" onclick="ApplyJob(@Model.Job_Id)" />
+    @Html.ActionLink("Back to List", "Index")
+</td></tr>
+    </table>
+</fieldset>

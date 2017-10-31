@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!-- saved from url=(0023)https://csstooltip.com/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>CSS tooltip</title>
+  <meta name="description" content="CSS tooltip has been designed to simplify the creation of tooltips, these little bubbles that make a site lively and pleasant! Type your CSS properties, adjust your working with the real time preview, copy your code and enjoy.">
+  <meta name="author" content="Guillaume Grégoire">
+  <meta name="google-site-verification" content="tZYVVI2BuHRnFX3QX1A4zvvgdNRrzb_HtmwwtODjm3w">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- CSS concatenated and minified via ant build script-->
+  <link rel="stylesheet" href="./CSS tooltip_files/style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="https://csstooltip.com/favicon.ico">
+  <!-- end CSS-->
+<style id="after-top" class="44px">div.preset-1 span:after { top: 44px; }</style><style id="after-left" class="50px">div.preset-1 span:after { left: 50px; }</style><style id="after-top-color" class="#FFFFFF">div.preset-1 span:after { border-top-color: #FFFFFF; }</style><style id="after-right-color" class="transparent">div.preset-1 span:after { border-right-color: transparent; }</style><style id="after-bottom-color" class="transparent">div.preset-1 span:after { border-bottom-color: transparent; }</style><style id="after-left-color" class="transparent">div.preset-1 span:after { border-left-color: transparent; }</style><style id="after-width" class="10px">div.preset-1 span:after { border-width: 10px; }</style><style id="after-style" class="solid">div.preset-1 span:after { border-style: solid; }</style><script type="text/javascript" charset="utf-8" async="" src="./CSS tooltip_files/button.fbaa419ee3b1f63d563b4dc1677c1aa4.js.download"></script></head>
+
+<body>
+
+  <div id="container">
+    <header>
+      <div class="container">
+        <h1 id="h1"><a href="http://csstooltip.com/">CSS tooltip</a></h1>
+      </div>
+    </header>
+    <div id="main" role="main">
+      <div class="container">
+        <div class="row">
+
+          <div id="t" class="span6">
+            <form id="generator">
+              <select id="preset" class="span3" rel="tooltip" data-original-title="Soon new presets" data-placement="right">
+                <option id="preset-1">Preset 1</option>
+                <option id="preset-2">Preset 2</option>
+              </select>
+
+              <br><br>
+
+              <h2>Box</h2>
+
+              <input id="text" class="span2" type="text" rel="tooltip" data-original-title="Text" data-placement="left" value="">
+              <input id="box-color" class="span2" type="text" rel="tooltip" data-original-title="Text color" data-placement="top" value="">
+              <input id="box-bgcolor" class="span2" type="text" rel="tooltip" data-original-title="Background color" data-placement="right" value="">
+
+              <input id="box-border-width" class="span2" type="text" rel="tooltip" data-original-title="Border width" data-placement="left" value="">
+              <input id="box-border-style" class="span2" type="text" rel="tooltip" data-original-title="Border style" data-placement="top" value="">
+              <input id="box-border-color" class="span2" type="text" rel="tooltip" data-original-title="Border color" data-placement="right" value="">
+
+              <input id="box-width" class="span2" type="text" rel="tooltip" data-original-title="Width" data-placement="left" value="">
+              <input id="box-height" class="span2" type="text" rel="tooltip" data-original-title="Height" data-placement="top" value="">
+              <input id="box-line-height" class="span2" type="text" rel="tooltip" data-original-title="Line height" data-placement="right" value="">
+
+              <input id="box-padding" class="span2" type="text" rel="tooltip" data-original-title="Padding" data-placement="left" value="">
+              <input id="box-font-size" class="span2" type="text" rel="tooltip" data-original-title="Font size" data-placement="top" value="">
+              <input id="box-text-align" class="span2" type="text" rel="tooltip" data-original-title="Text align" data-placement="right" value="">
+
+              <input id="box-border-radius" class="span2" type="text" rel="tooltip" data-original-title="Border radius" data-placement="left" value="">
+              <input id="box-text-shadow" class="span2" type="text" rel="tooltip" data-original-title="Text shadow" data-placement="bottom" value="">
+              <input id="box-box-shadow" class="span2" type="text" rel="tooltip" data-original-title="Box shadow" data-placement="right" value="">
+
+              <h2>Arrow</h2>
+
+              <input id="arrow-top" class="span2" type="text" rel="tooltip" data-original-title="Vertical position" data-placement="left" value="">
+              <input id="arrow-left" class="span2" type="text" rel="tooltip" data-original-title="Horizontal position" data-placement="top" value="">
+              <input id="arrow-direction" class="span2" rel="tooltip" data-original-title="Direction" data-placement="right" value="">
+
+              <input id="arrow-width" class="span2" type="text" rel="tooltip" data-original-title="Width" data-placement="left" value="">
+              <input id="arrow-style" class="span2" type="text" rel="tooltip" data-original-title="Style" data-placement="bottom" value="">
+              <input id="arrow-color" class="span2" type="text" rel="tooltip" data-original-title="Color" data-placement="right" value="">
+
+              <h2>Code</h2>
+
+              <textarea id="css" class="span6" rel="tooltip" data-original-title="Your CSS" data-placement="top">span.tooltip {
+      position: absolute;
+      width: 100px;
+      height: 20px;
+      line-height: 20px;
+      padding: 10px;
+      font-size: 14px;
+      text-align: center;
+      color: rgb(113, 157, 171);
+      background: rgb(255, 255, 255);
+      border: 4px solid rgb(255, 255, 255);
+      border-radius: 5px;
+      text-shadow: rgba(0, 0, 0, 0.1) 1px 1px 1px;
+      box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 2px 0px;
+}
+
+span.tooltip:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-width: 10px;
+      border-style: solid;
+      border-color: #FFFFFF transparent transparent transparent;
+      top: 44px;
+      left: 50px;
+}</textarea>
+            </form>
+          </div>
+
+          <div class="span6">
+            <div id="wrapper" class="preset-1">
+              <span>Welcome!!!</span>
+            </div>
+            <div id="about">
+              <h3>About CSS tooltip</h3>
+              <h4>It has been designed to simplify the creation of tooltips, these little bubbles that make a site lively and pleasant! Type your CSS properties, adjust your working with the real time preview, copy your code and enjoy. The site is currently in beta. All comments, ideas or bug reports are welcome. You can join me on Twitter.</h4>
+              <h5>Current version: beta - Made by <a href="https://twitter.com/guillaumgregoir" rel="tooltip" data-original-title="Follow me on Twitter" data-placement="top">@guillaumgregoir</a></h5>
+              <span id="social">
+                <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" title="Twitter Tweet Button" src="./CSS tooltip_files/tweet_button.b3226572cee17eb8b0f0dfc053da78fc.en.html" style="position: static; visibility: visible; width: 61px; height: 20px;"></iframe>
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <footer>
+
+    </footer>
+  </div> <!--! end of #container -->
+
+  <script type="text/javascript" async="" src="./CSS tooltip_files/ga.js.download"></script><script id="twitter-wjs" src="./CSS tooltip_files/widgets.js.download"></script><script src="./CSS tooltip_files/jquery.min.js.download"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.2.min.js"><\/script>')</script>
+
+  <script defer="" src="./CSS tooltip_files/plugins.js.download"></script>
+  <script defer="" src="./CSS tooltip_files/script.js.download"></script>
+  <script defer="" src="./CSS tooltip_files/bootstrap-tooltip.js.download"></script>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-16709718-4']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+
+<iframe id="rufous-sandbox" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: none;" title="Twitter analytics iframe" src="./CSS tooltip_files/saved_resource.html"></iframe></body></html>

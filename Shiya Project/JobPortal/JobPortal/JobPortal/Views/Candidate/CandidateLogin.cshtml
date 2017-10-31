@@ -1,0 +1,50 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>CandidateLogin</title>
+    <link href="@Url.Content("~/Content/Admin/css/bootstrap.min.css")" rel='stylesheet' type='text/css' />
+    <link href="@Url.Content("~/Content/Admin/css/style.css")" rel='stylesheet' type='text/css' />
+    <link href="@Url.Content("~/Content/Admin/css/font-awesome.css")" rel="stylesheet">  
+</head>
+<body>
+    @using (@Html.BeginForm("Authenticate_Login", "Candidate"))
+    {
+    <div>
+        <div class="login">
+		<h1><a>Candidate Login </a></h1>
+		<div class="login-bottom">
+	
+			<div class="col-md-6">
+					<div class="login-mail">
+					<input type="text" placeholder="User Name" required="" id="txt_candUserName" name="txt_candUserName">
+					
+				</div>
+				<div class="login-mail">
+					<input type="password" placeholder="Password" required="" id="txt_candPassword" name="txt_candPassword">
+					<i class="fa fa-lock"></i>
+				</div>
+				   <a class="news-letter " href="#">
+						 <label class="checkbox1"><input type="checkbox" name="checkbox" ><i> </i>Forget Password</label>
+					   </a>
+
+			
+			</div>
+			<div class="col-md-6 login-do">
+				<label class="hvr-shutter-in-horizontal login-sub">
+                    <input type="submit" value="Login">
+					@* @Html.ActionLink("Login", "Authenticate_Login", "Candidate", new { @class = "hvr-shutter-in-horizontal" })*@
+					</label>
+					<p>Do not have an account?</p>
+                @Html.ActionLink("Signup", "SignUp", "Candidate", new { @class = "hvr-shutter-in-horizontal" })
+			</div>
+			
+			<div class="clearfix"> </div>
+			
+		</div>
+	</div>
+    </div>
+ }
+</body>
+</html>

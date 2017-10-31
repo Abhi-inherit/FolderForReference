@@ -1,0 +1,469 @@
+﻿.topDiv {
+    width:100%;
+    height:100px;
+    background-color:#2e5491;
+}
+.fb {
+    position:absolute;
+    margin-left:175px;
+    margin-top:25px;
+    color:white;
+    font-size:47px;
+}
+.email {
+    position:absolute;
+    margin-left:840px;
+    color:white;
+}
+.emailTxt {
+    position:absolute;
+    margin-left:840px;
+    margin-top:42px;
+}
+.pass {
+    position:absolute;
+    margin-left:1030px;
+    color:white;
+}
+.passtxt {
+    position:absolute;
+    margin-left:1030px;
+    margin-top:42px;
+}
+.logIn {
+    position:absolute;
+    margin-left:1230px;
+    margin-top:42px;
+    color:white;
+    background-color:#126591;
+    width:60px;
+    border-color:aliceblue;
+}
+.needHelp {
+    position:absolute;
+    margin-left:1230px;
+    margin-top:70px;
+     color:lightblue;
+}
+.divBody {
+     width:100%;
+    height:610px;
+    background-color:#e6f2ff;
+}
+.fbLine {
+     position:absolute;
+    margin-left:175px;
+    margin-top:70px;
+    color:black;
+    font-size:25px;
+}
+.img {
+position:absolute;
+margin-left:175px;
+margin-top:170px;
+}
+.createAn {
+    position:absolute;
+    margin-left:800px;
+    color:black;
+    font-size:40px;
+}
+.free {
+    position:absolute;
+    margin-left:800px;
+    margin-top:100px;
+    color:black;
+    font-size:25px;
+}
+.firstName {
+     position:absolute;
+    margin-left:800px;
+    margin-top:150px;
+    height:35px;
+    width:200px;
+}
+.firstNameAlt {
+     position:absolute;
+    margin-left:800px;
+    margin-top:150px;
+    height:35px;
+    width:200px;
+     border-style:solid;
+    border-radius: 5px;
+    padding:2px;
+    padding-left:2px;
+    border:solid 1px red;
+}
+.surname {
+     position:absolute;
+    margin-left:1020px;
+    margin-top:150px;
+    height:35px;
+    width:200px;
+}
+.surnameAlt {
+     position:absolute;
+    margin-left:1020px;
+    margin-top:150px;
+    height:35px;
+    width:200px;
+    border-style:solid;
+    border-color:red;
+}
+.MobileOrEmail {
+    position:absolute;
+     margin-left:800px;
+    margin-top:210px;
+    height:35px;
+    width:420px;
+}
+.meAlt {
+    position:absolute;
+    margin-left:800px;
+    margin-top:210px;
+    height:35px;
+    width:420px;
+    border-style:solid;
+    border-color:red;
+}
+.newPassword {
+    position:absolute;
+     margin-left:800px;
+    margin-top:270px;
+    height:35px;
+    width:420px;
+}
+.psAlt {
+    position:absolute;
+     margin-left:800px;
+    margin-top:270px;
+    height:35px;
+    width:420px;
+    border-style:solid;
+    border-color:red;
+}
+.birthday {
+    position:absolute;
+    margin-left:800px;
+    margin-top:340px;
+    color:black;
+    font-size:25px;
+}
+.day {
+    position:absolute;
+    margin-left:800px;
+    margin-top:375px;
+    width:60px;
+    height:35px;
+}
+.dAlt {
+    position:absolute;
+    margin-left:800px;
+    margin-top:375px;
+    width:60px;
+    height:35px;
+    border-style:solid;
+    border-color:red;
+}
+.month {
+    position: absolute;
+    margin-left: 860px;
+    margin-top: 375px;
+    width: 80px;
+    height: 35px;
+}
+.mAlt {
+ position: absolute;
+    margin-left: 860px;
+    margin-top: 375px;
+    width: 80px;
+    height: 35px;
+    border-style:solid;
+    border-color:red;
+}
+.year {
+    position: absolute;
+    margin-left: 940px;
+    margin-top: 375px;
+    width: 70px;
+    height: 35px;
+}
+.yAlt {
+     position: absolute;
+    margin-left: 940px;
+    margin-top: 375px;
+    width: 70px;
+    height: 35px;
+    border-style:solid;
+    border-color:red;
+}
+.why{
+    position: absolute;
+    margin-left: 1025px;
+    margin-top: 375px;
+    font-size:13px;
+    color:#335896;
+}
+.txt:hover {
+    text-decoration: underline;
+}
+.radio1 {
+    position:absolute;
+    margin-left:810px;
+    margin-top:435px;
+    border: 1px solid red;
+}
+.male {
+position:absolute;
+    margin-left:835px;
+    margin-top:425px;
+    color:black;
+    font-size:25px;
+}
+.radio2 {
+    position:absolute;
+    margin-left:920px;
+    margin-top:435px;
+}
+.female {
+position:absolute;
+    margin-left:950px;
+    margin-top:425px;
+    color:black;
+    font-size:25px;
+}
+a:hover { 
+   text-decoration: underline;
+}
+input
+{
+border-radius: 5px;
+border:solid 1px black;
+padding:2px;
+padding-left:2px;
+}
+.creating {
+    position: absolute;
+    margin-left:800px;
+    margin-top: 470px;
+    font-size:14px;
+    color:#335896;
+}
+.submit {
+position: absolute;
+margin-left:800px;
+margin-top: 550px;
+width:200px;
+height:40px;
+background-color:#3e993e;
+font-weight:bold;
+font-size:15px;
+color:whitesmoke;
+}
+input::-webkit-input-placeholder {
+    font-size: 18px;
+    line-height: 2;
+   padding-left:10px;
+}
+.divfn {
+    position:absolute;
+    margin-left:965px;
+    margin-top:153px;
+}
+.divsn {
+    position:absolute;
+    margin-left:1186px;
+    margin-top:153px;
+}
+.divmo {
+    position:absolute;
+    margin-left:1186px;
+    margin-top:215px;
+}
+.divpass {
+    position:absolute;
+    margin-left:1186px;
+    margin-top:375px;
+}
+.img11 {
+    position:absolute;
+    margin-left:1186px;
+    margin-top:275px;
+}
+.divGen {
+     position:absolute;
+    margin-left:1186px;
+    margin-top:417px;
+}
+.tooltip {
+    position: inherit;
+    display: inline-block;
+    border-bottom: 5px dotted black;
+}
+.ttfn1 {
+    position:absolute;
+    margin-left:575px;
+    margin-top:152px; 
+}
+.tooltip .tooltiptext {
+    width: 200px;
+    height:25px;
+    background-color: #b24c56;
+    color: #fff;
+    text-align:center;
+    padding:  5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+}
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent #b24c56;
+}
+.ttsn1 {
+    position:absolute;
+    margin-left:1250px;
+    margin-top:152px;
+}
+.tooltip .x {
+    width: 200px;
+    height:25px;
+    background-color: #b24c56;
+    color: #fff;
+    text-align:center;
+    padding:  5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+}
+.tooltip .x::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    right: 100%; 
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #b24c56 transparent transparent;
+}
+.ttm1 {
+    position:absolute;
+    margin-left:515px;
+    margin-top:200px;
+}
+.tooltip .y {
+    width: 260px;
+    height:50px;
+    background-color: #b24c56;
+    color: #fff;
+    text-align:center;
+    padding:  5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+}
+.tooltip .y::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent #b24c56;
+}
+.ttp1 {
+    position:absolute;
+    margin-left:506px;
+    margin-top:265px;
+}
+.tooltip .z {
+    width: 270px;
+    height:50px;
+    background-color: #b24c56;
+    color: #fff;
+    text-align:center;
+    padding:  5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+}
+.tooltip .z::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent #b24c56;
+}
+.ttdob1 {
+    position:absolute;
+    margin-left:506px;
+    margin-top:360px;
+}
+.tooltip .a {
+    width: 270px;
+    height:50px;
+    background-color: #b24c56;
+    color: #fff;
+    text-align:center;
+    padding:  5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+}
+.tooltip .a::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent #b24c56;
+}
+.test {
+    position:absolute;
+    margin-left:1050px;
+    margin-top:410px;
+}
+.tooltip .b {
+    width: 270px;
+    height:40px;
+    background-color: #b24c56;
+    color: #fff;
+    text-align:center;
+    padding:  5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+}
+.tooltip .b::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    right: 100%; 
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #b24c56 transparent transparent;
+}
+.dobtest 
+{
+    position:absolute;
+    border: 1px solid blue;
+    height:48px;
+    width:56px;
+    margin-left:800px;
+    margin-top:374px;
+    /*opacity: 1;*/
+    background-color:red;
+}

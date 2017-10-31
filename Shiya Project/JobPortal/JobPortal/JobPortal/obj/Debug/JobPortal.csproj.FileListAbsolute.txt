@@ -1,0 +1,5 @@
+D:\ShiyaProjects\JobPortal\JobPortal\bin\JobPortal.dll
+D:\ShiyaProjects\JobPortal\JobPortal\bin\JobPortal.pdb
+D:\ShiyaProjects\JobPortal\JobPortal\obj\Debug\JobPortal.dll
+D:\ShiyaProjects\JobPortal\JobPortal\obj\Debug\JobPortal.pdb
+D:\ShiyaProjects\JobPortal\JobPortal\obj\Debug\JobPortal.csprojResolveAssemblyReference.cache

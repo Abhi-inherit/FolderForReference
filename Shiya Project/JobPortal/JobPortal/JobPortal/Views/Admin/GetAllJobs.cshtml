@@ -1,0 +1,113 @@
+﻿@model IEnumerable<JobPortal.Models.Jobs>
+<div class="banner">
+    <div class="grid-form">
+      <div class="grid-form1">
+  <div class="panel-body">
+      <div  class="form-horizontal">
+		  <div class="form-group mb-n">
+              <label class="col-md-2 control-label">Job Title</label>
+              <div class="col-md-8"><input type="text" class="form-control1" value="" id="txt_JobName"/></div>
+		  </div>
+          <div class="form-group mb-n">
+              <label class="col-md-2 control-label">Skills</label>
+              <div class="col-md-8"><input type="text" class="form-control1" value="" id="txt_Skills"/></div>
+		  </div>
+            <div class="form-group mb-n">
+              <label class="col-md-2 control-label">Category</label>
+              <div class="col-md-8">@Html.DropDownList("Sel_Category",ViewBag.Category as List<SelectListItem>,new{@class="form-control1"})</div>
+		  </div>
+          <div class="form-group mb-n">
+              <label class="col-md-2 control-label">Location</label>
+              <div class="col-md-8">@Html.DropDownList("Sel_Location",ViewBag.Location as List<SelectListItem>,new{@class="form-control1"})</div>
+		  </div>
+          <div class="form-group mb-n">
+              <label class="col-md-2 control-label">Experience</label>
+              <div class="col-md-8">@Html.DropDownList("Sel_Experience",ViewBag.Experience as List<SelectListItem>,new{@class="form-control1"})</div>
+		  </div>
+	  </div>
+	</div>
+
+      <div class="panel-footer">
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+                <input type="button" value="Search" class="btn-primary btn"  onclick ="SearchProcessing()" />
+			</div>
+		</div>
+	 </div>
+ 
+  </div>
+        </div>
+</div>
+<div class="inbox-mail">
+    <div class="grid-form">
+      <div class="grid-form1">
+  <div class="panel-body">
+
+<table style="width:100%;border:5px solid grey">
+    <tr style="border:5px solid grey">
+       
+        <th>
+            Title
+        </th>
+        <th>
+            Designation
+        </th>
+     
+        <th>
+            Status
+        </th>
+        
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+       
+        <td>
+            @Html.DisplayFor(modelItem => item.Job_Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Job_Designation)
+        </td>
+       
+  
+        <td>
+            @Html.DisplayFor(modelItem => item.Job_Status)
+        </td>
+       
+        <td>
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" onclick="ViewJob(@item.Job_Id)">Details</button>
+            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" onclick="EditJobStatus(@item.Job_Id)">Edit Status</button>
+
+        </td>
+    </tr>
+}
+
+</table>
+</div> 
+
+             </div>
+    </div>
+
+  </div>
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body" id="modal-body">
+        <p>Some text in the modal.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>

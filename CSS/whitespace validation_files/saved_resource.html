@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<!-- saved from url=(0072)https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_regexp_space -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"></head><body contenteditable="false">
+
+<p>Click the button to do a global search for whitespace characters in a string.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"> , , , </p>
+
+<script>
+function myFunction() {
+    var str = "Is this all there is?";
+    var patt1 = /\s/g;
+    var result = str.match(patt1);
+    document.getElementById("demo").innerHTML = result;
+}
+</script>
+
+
+
+</body></html>

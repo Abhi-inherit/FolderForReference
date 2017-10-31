@@ -1,0 +1,13 @@
+html hyper text markup language Function is to define the browser what to display in the user interphase. 
+It consists of opening and closing tags. Contents of browser interface are added inside of this tag to define the design. 
+To create a html file we can save a notepad file by editing its file extension to .html or .htm 
+Html contains two parts head and the body. 
+head defines the general aspects and information of the page while body holds the content of the page. 
+Head consists the information about style used, script type and Title. 
+Html has tag elements and elements hold the attribute of each elements. 
+Attribue adds extra features for the tags. 
+Tags r two types container tag and empty tag. container tag requires a closing tag while empty tag dont need a closing tag. 
+It closes in the same opening tag. 
+Atribute will have its property and value. 
+for ex.
+Here p is the tag. style the attribute of the P. Clour property of attribute and red value of the property.

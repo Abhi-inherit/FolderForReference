@@ -1,0 +1,85 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Sign Up</title>
+    <link href="@Url.Content("~/Content/Admin/css/bootstrap.min.css")" rel='stylesheet' type='text/css' />
+    <link href="@Url.Content("~/Content/Admin/css/style.css")" rel='stylesheet' type='text/css' />
+    <link href="@Url.Content("~/Content/Admin/css/font-awesome.css")" rel="stylesheet">       
+        
+</head>
+<body>
+  <div class="login">
+		<h1><a>Candiadte Registration</a></h1>
+		<div class="login-bottom">
+			<h2>Sign Up</h2>
+            @using (@Html.BeginForm("RegisterNewCandidate", "Candidate", FormMethod.Post,new { enctype = "multipart/form-data" }))
+            {
+			<div class="col-md-6">
+				<div class="login-mail">
+					<input type="text" placeholder="User Name" required="" id="txt_candUserName" name="txt_candUserName">
+					
+				</div>
+				<div class="login-mail">
+					<input type="password" placeholder="Password" required="" id="txt_candPassword" name="txt_candPassword">
+					<i class="fa fa-lock"></i>
+				</div>
+				<div class="login-mail">
+					<input type="password" placeholder="Confirm password" required="" id="txt_candConfirmPassword" name="txt_candConfirmPassword">
+					<i class="fa fa-lock"></i>
+				</div>
+                <div class="login-mail">
+					<input type="text" placeholder="Name" required="" id="txt_candName" name="txt_candName">
+					
+				</div>
+                <div class="login-mail">
+					<input type="text" placeholder="Email Id" required="" id="txt_candEmail" name="txt_candEmail">
+					
+				</div>
+                <div class="login-mail">
+					<input type="text" placeholder="Mobile Number" required="" id="txt_candMobile" name="txt_candMobile">
+					
+				</div>
+                <div class="login-mail">
+					<input type="text" placeholder="Address" required="" id="txt_candAddress" name="txt_candAddress">
+					
+				</div>
+                <div class="login-mail">
+					<input type="text" placeholder="Qualification" required="" id="txt_candQualification" name="txt_candQualification">
+					
+				</div>
+                <div class="col-md-12 form-group2 login-mail">
+					@Html.DropDownList("Sel_Category",ViewBag.Category as List<SelectListItem>,new { @name = "Sel_Category" } )
+				</div>
+                <div class="col-md-12 form-group2 login-mail">@Html.DropDownList("Sel_Location", ViewBag.Location as List<SelectListItem>, new { @name = "Sel_Location" })</div> 
+                <div class="col-md-12 form-group2 login-mail"> @Html.DropDownList("Sel_Experience",ViewBag.Experience as List<SelectListItem>,new { @name = "Sel_Experience" })</div> 
+              <div class="clearfix"> </div>
+                <div class="login-mail">
+					<input type="text" placeholder="Skill Description" required="" id="txt_candSkills" name="txt_candSkills">
+					
+				</div>
+                <div class="login-mail">
+					<input type="file" id="file1" name="file1" />
+					
+				</div>
+                
+				  <a class="news-letter" href="#">
+						 <label class="checkbox1"><input type="checkbox" name="checkbox" ><i> </i>I agree with the terms</label>
+					   </a>
+	
+			</div>
+			<div class="col-md-6 login-do">
+				<label class="hvr-shutter-in-horizontal login-sub">
+					<input type="submit" value="Submit">
+					</label>
+           
+					<p>Already register</p>
+                @Html.ActionLink("Login", "CandidateLogin", "Candidate", new { @class = "hvr-shutter-in-horizontal" })
+			</div>
+            }
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+</body>
+</html>

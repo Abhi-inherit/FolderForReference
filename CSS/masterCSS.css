@@ -1,0 +1,19 @@
+﻿.imgposition {width: 260px;height: 810px;}
+.divimgposition {position:relative;left: 250px;top:0px;}
+.divimgposition2 {position:absolute;left: 515px;top:0px;width:700px;height:200px;}
+.pdiv {position:absolute;left: 305px; top:23px;width:700px;height:200px;color:white;font-size:50px;}
+.pdiv2 {position:absolute;left: 450px;top:82px;width:700px;height:200px;color:white;font-style:italic;}
+a:link {color:black;}
+a:visited {color: green;}
+a:hover {color: hotpink;text-decoration:underline;}
+a:active {color: blue;}
+.pdiv3{position:absolute;left:305px; top:170px;width:700px;height:200px;color:white;font-size:25px;}
+.pdiv4 {position:absolute;left:287px; top:272px;width:700px;height:200px;color:white;width:195px;text-align:center;}
+.pdiv5{position:absolute;left:305px; top:542px;width:700px;height:200px;color:white;font-size:23px;}
+.ul1{list-style-type:disc;position:absolute;left:267px; top:592px;width:700px;height:200px;color:white;}
+.pdiv6 {font: bold;font-size:20px;}
+.menu{position:absolute;left:580px; top:170px;}
+.img1 {position:absolute;left:580px; top:260px;}
+.img2 {position:absolute;left:580px; top:410px;}
+.img3 {position:absolute;left:580px; top:560px;}
+.img4 {position:absolute;left:580px; top:710px;}
